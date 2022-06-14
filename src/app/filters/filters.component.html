@@ -1,0 +1,32 @@
+<section>
+    <div>
+      <span *ngFor="let voice of voices">
+        <input type="checkbox" 
+          [(ngModel)]="voice.checked" 
+          (change)="changeCheckbox(voices, 'voice')"
+        >{{ voice.value }}
+      </span>
+    </div>
+</section>
+
+<section>
+    <div>
+      <span *ngFor="let time of times">
+        <input type="checkbox" 
+          [(ngModel)]="time.checked" 
+          (change)="changeCheckbox(times, 'time')"
+        >{{ time.value }}
+      </span>
+    </div>
+</section>
+
+<section>
+    <div>
+      <span *ngFor="let typeTime of typeTimes">
+        <input type="checkbox" 
+          [(ngModel)]="typeTime.checked" 
+          (change)="changeCheckbox(typeTimes, 'timeType')"
+        >{{ typeTime.value }}
+      </span>
+    </div>
+</section>
