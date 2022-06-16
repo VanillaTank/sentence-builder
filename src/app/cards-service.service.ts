@@ -1,58 +1,40 @@
 import { Injectable } from '@angular/core';
 import { Card } from './card';
-import { CARDS } from './mock-cards';
+import { PRESENT_SIMPLE } from './cards-data/PRESENT_SIMPLE';
+import { GeneralSearchValues } from '../app/filters/interfaces'
 
 @Injectable({
   providedIn: 'root'
 })
 export class CardsService {
 
+  cards: Card[] = [...PRESENT_SIMPLE];
   //@ts-ignore
   selectedCards: Card[] | [] = CARDS;
 
   constructor() { }
 
-  updateSelectedCards(query: any): void {
-    this.selectedCards = CARDS
+  updateSelectedCards(query: GeneralSearchValues): void {
+    this.selectedCards = this.cards.filter(card => {
+      if (query.voice.length > 0 && !query.voice.includes(card.type.voice)) {
+        return false;
+      }
+      if (query.time.length > 0 && !query.time.includes(card.type.time)) {
+        return false;
+      }
+      if (query.timeType.length > 0 && !query.timeType.includes(card.type.timeType)) {
+        return false;
+      }
+      if (query.pronoun.length > 0 && !query.pronoun.includes(card.type.pronoun)) {
+        return false;
+      }
+      if (query.verb.length > 0 && !query.verb.includes(card.type.verb)) {
+        return false;
+      }
+      if (query.sentenceType.length > 0 && !query.sentenceType.includes(card.type.sentenceType)) {
+        return false;
+      }
+      return true;
+    })
   }
-
-  // getSelectedCards(query: any): Card[] | [] {
-
-  //   // let aa = CARDS
-  //   //   .filter(card => {
-  //   //     if(query.voice.includes(card.type.voice)) { return card}
-  //   //     return false
-  //   //   })
-  //   //   .filter(selected => {
-  //   //     if(query.time.includes(selected.type.time)) { return selected}
-  //   //     return false
-  //   //   })
-  //   //   // .filter(selected => {
-  //   //   //   return selected.type.timeType.split('').some((el) => el.includes(query.timeType))
-  //   //   // })
-
-  //   // let aa: any = []
-  //   // CARDS.map(card => {
-  //   //   if(query.voice) {
-  //   //     for(let v of query.voice) {
-  //   //       if(card.type.voice === v) {
-  //   //         aa.push(card)
-  //   //       } else if (card.type.voice !== v && aa.includes())
-  //   //     }
-  //   //   }
-
-  //   //   if(query.time) {
-  //   //     for(let t of query.time) {
-  //   //       if(card.type.time === t) {
-  //   //         aa.push(card)
-  //   //       }
-  //   //     }
-  //   //   }
-  //   // })
-
-  //   // console.log(aa);
-
-  //   // return aa;
-
-  // }
 }

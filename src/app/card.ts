@@ -5,19 +5,15 @@ export interface Card {
     }
     theory?: string
     schema: string
-    type: {
-        voice: string,
-        time: string,
-        timeType: string
-    }
+    type: CardType
+    isTheoryShow: boolean
 }
 
-// export interface Card {
-//     text: {
-//         en: string
-//         ru: string
-//     }
-//     theory?: string
-//     schema: string
-//     type: string[]
-// }
+export interface CardType {
+    voice: string,
+    time: string,
+    timeType: string
+    pronoun: string
+    verb: string
+    sentenceType: string
+}

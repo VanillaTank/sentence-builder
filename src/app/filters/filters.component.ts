@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardsService } from '../cards-service.service';
+import { SearchItem, GeneralSearchValues } from './interfaces';
+import { GENERAL_SEARCH_ITEMS } from './SEARCH_ITEMS'
 
 @Component({
   selector: 'app-filters',
@@ -8,47 +10,38 @@ import { CardsService } from '../cards-service.service';
 })
 
 export class FiltersComponent implements OnInit {
-  voices: any[] = [];
-  times: any[] = [];
-  typeTimes: any[] = [];
 
-  searchValues: any = { 
+  // General
+  voices: SearchItem[] = GENERAL_SEARCH_ITEMS.voices;
+  times: SearchItem[] = GENERAL_SEARCH_ITEMS.times;
+  typeTimes: SearchItem[] = GENERAL_SEARCH_ITEMS.typeTimes;
+  pronouns: SearchItem[] = GENERAL_SEARCH_ITEMS.pronoun;
+  verbs: SearchItem[] = GENERAL_SEARCH_ITEMS.verb;
+  sentenceTypes: SearchItem[] = GENERAL_SEARCH_ITEMS.sentenceType;
+
+  generalSearchValues: GeneralSearchValues = { 
     voice: [],
     time: [],
-    timeType: []};
+    timeType: [],
+    pronoun: [],
+    verb: [],
+    sentenceType: []
+  };
 
-  constructor(public cardsService: CardsService) { }
+  constructor(private cardsService: CardsService) { }
 
-  ngOnInit() {
-    this.voices = [
-      { value: 'active', checked: false },
-      { value: 'passive', checked: false }]
+  ngOnInit() {}
 
-
-    this.times = [
-      { value: 'past', checked: false },
-      { value: 'present', checked: false },
-      { value: 'future', checked: false }]
-
-
-    this.typeTimes = [
-      { value: 'simple', checked: false },
-      { value: 'continious', checked: false },
-      { value: 'perfect', checked: false },
-      { value: 'perfect continious', checked: false }]
-  }
-
-  changeCheckbox(list: any[], title: string) {
+  changeCheckbox(list: SearchItem[], title: string):void {
     list
-      .map(el => {
-        
-        if(el.checked && !this.searchValues[title].includes(el.value)) {
-          this.searchValues[title].push(el.value);
-        } else if (!el.checked && this.searchValues[title].includes(el.value)) {
-          const i = this.searchValues[title].indexOf(el.value);
-          this.searchValues[title].splice(i, 1);
+      .map((el: SearchItem)  => {
+        if(el.checked && !this.generalSearchValues[title].includes(el.value)) {
+          this.generalSearchValues[title].push(el.value);
+        } else if (!el.checked && this.generalSearchValues[title].includes(el.value)) {
+          const i = this.generalSearchValues[title].indexOf(el.value);
+          this.generalSearchValues[title].splice(i, 1);
         }
       });
-    this.cardsService.updateSelectedCards(this.searchValues);
+    this.cardsService.updateSelectedCards(this.generalSearchValues);
   }
 }

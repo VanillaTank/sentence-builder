@@ -1,8 +1,41 @@
-<ul>
-    <li *ngFor="let card of cardsService.selectedCards">
-        <div>{{card.schema}}</div>
-        <div *ngIf="card.theory">{{card.theory}}</div>
-        <div>{{card.text.en}}</div>
-        <div>{{card.text.ru}}</div>
-    </li>
-</ul>
+<div class="card-container" *ngIf="cardsService.selectedCards.length > 0">
+    <ul class="card-list">
+        <li class="card"
+            *ngFor="let card of cardsService.selectedCards.slice(0, getMidOfArr(cardsService.selectedCards))">
+            <div class="card-header">
+                <span class="card-title" *ngFor="let type of card.type | keyvalue:sortingTypeForTitle">
+                    {{type.value[0] | uppercase}}{{type.value.slice(1)}}
+                </span>
+            </div>
+            <div class="card-theory" *ngIf="card.theory" (click)="card.isTheoryShow = !card.isTheoryShow">
+                <div class="card-theory-toggle">Theory</div>
+                <div *ngIf="card.isTheoryShow">
+                    {{card.theory}}
+                </div>
+            </div>
+            <div class="card-schema"> Schema:<br>{{card.schema}}</div>
+            <div class="card-text-en">{{card.text.en}}</div>
+            <div class="card-text-ru">{{card.text.ru}}</div>
+        </li>
+    </ul>
+
+    <ul class="card-list">
+        <li class="card"
+            *ngFor="let card of cardsService.selectedCards.slice(getMidOfArr(cardsService.selectedCards))">
+            <div class="card-header">
+                <span class="card-title" *ngFor="let type of card.type | keyvalue:sortingTypeForTitle">
+                    {{type.value[0] | uppercase}}{{type.value.slice(1)}}
+                </span>
+            </div>
+            <div class="card-theory" *ngIf="card.theory" (click)="card.isTheoryShow = !card.isTheoryShow">
+                <div class="card-theory-toggle">Theory</div>
+                <div *ngIf="card.isTheoryShow">
+                    {{card.theory}}
+                </div>
+            </div>
+            <div class="card-schema"> Schema:<br>{{card.schema}}</div>
+            <div class="card-text-en">{{card.text.en}}</div>
+            <div class="card-text-ru">{{card.text.ru}}</div>
+        </li>
+    </ul>
+</div>

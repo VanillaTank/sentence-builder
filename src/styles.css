@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: normal;
+    color: #041A00;
+    font-family: 'Noto Serif', serif;
+}
+
+body {
+    background-color: #ECECEC;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1220px;
+    padding: 0 10px;
+}
