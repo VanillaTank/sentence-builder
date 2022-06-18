@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Card } from './card';
 import { PRESENT_SIMPLE } from './cards-data/PRESENT_SIMPLE';
+import { PAST_SIMPLE } from './cards-data/PAST_SIMPLE';
 import { GeneralSearchValues } from '../app/filters/interfaces'
 
 @Injectable({
@@ -8,9 +9,9 @@ import { GeneralSearchValues } from '../app/filters/interfaces'
 })
 export class CardsService {
 
-  cards: Card[] = [...PRESENT_SIMPLE];
+  cards: Card[] = [...PRESENT_SIMPLE, ...PAST_SIMPLE];
   //@ts-ignore
-  selectedCards: Card[] | [] = CARDS;
+  selectedCards: Card[] | [] = this.cards;
 
   constructor() { }
 
