@@ -4,7 +4,7 @@ export interface Card {
         ru: string
     }
     theory?: string
-    schema: string
+    scheme: string
     type: CardType
     isTheoryShow: boolean
 }

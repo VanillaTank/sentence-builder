@@ -8,7 +8,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Я вчера работал.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + V1+ed',
+        scheme: 'I + V1+ed',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -25,7 +25,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Мы вчера работали.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + V1+ed',
+        scheme: 'We + V1+ed',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -42,7 +42,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Ты работал вчера(в ед.ч.) ИЛИ Вы работали вчера(во мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + V1+ed',
+        scheme: 'You + V1+ed',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -59,7 +59,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Он работал вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + V1+ed',
+        scheme: 'He/she/it + V1+ed',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -76,7 +76,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Они работали вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + V1+ed',
+        scheme: 'They + V1+ed',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -95,7 +95,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Я не работал вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + did not + V1',
+        scheme: 'I + did not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -112,7 +112,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Мы не работали вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + did + V1',
+        scheme: 'We + did not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -129,7 +129,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Ты не работал вчера(ед.ч.) ИЛИ Вы не работали вчера(мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + did not + V1',
+        scheme: 'You + did not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -146,7 +146,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Он не работал вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + did not + V1',
+        scheme: 'He/she/it + did not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -163,7 +163,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Они не работали вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + did not + V1',
+        scheme: 'They + did not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -182,7 +182,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Я ходил вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + V2',
+        scheme: 'I + V2',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -199,7 +199,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Мы ходили вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + V2',
+        scheme: 'We + V2',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -216,7 +216,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Ты ходил вчера(ед.ч.). ИЛИ Вы ходили вчера(мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + V2',
+        scheme: 'You + V2',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -233,7 +233,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Он ходил вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + V2',
+        scheme: 'He/she/it + V2',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -250,7 +250,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Они ходили вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + V2',
+        scheme: 'They + V2',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -269,7 +269,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Я не ходил вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + did not + V1',
+        scheme: 'I + did not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -286,7 +286,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Мы не ходили вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + did not + V1',
+        scheme: 'We + did not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -303,7 +303,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Ты не ходил вчера(ед.ч.) ИЛИ Вы ходили вчера(мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + did not + V1',
+        scheme: 'You + did not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -320,7 +320,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Он не ходил вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + did not + V1',
+        scheme: 'He/she/it + did not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -337,7 +337,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Они не ходили вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + did not + V1',
+        scheme: 'They + did not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -356,7 +356,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Я делал это вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + V2(did)',
+        scheme: 'I + V2(did)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -373,7 +373,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Мы делали это вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + V2(did)',
+        scheme: 'We + V2(did)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -390,7 +390,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Ты делал это вчера(ед.ч.) ИЛИ Вы делали это вчера(мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + V2(did)',
+        scheme: 'You + V2(did)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -407,7 +407,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Он делал это вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + V2(did)',
+        scheme: 'He/she/it + V2(did)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -424,7 +424,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Они делали это вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + V2(did)',
+        scheme: 'They + V2(did)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -443,7 +443,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Я не делал этого вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + did not + V1(do)',
+        scheme: 'I + did not + V1(do)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -460,7 +460,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Мы делали этого вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + did not + V1(do)',
+        scheme: 'We + did not + V1(do)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -477,7 +477,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Ты не делал этого вчера(ед.ч.) ИЛИ Вы не делали этого вчера(мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + did not + V1(do)',
+        scheme: 'You + did not + V1(do)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -494,7 +494,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Он не делал этого вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + did not + V1(do)',
+        scheme: 'He/she/it + did not + V1(do)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -511,7 +511,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Они не делали этого вчера.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + did not + V1(do)',
+        scheme: 'They + did not + V1(do)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -530,7 +530,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'У меня была кошка.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + V2(had)',
+        scheme: 'I + V2(had)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -547,7 +547,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'У нас была кошка.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + V2(had)',
+        scheme: 'We + V2(had)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -564,7 +564,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'У тебя была кошка(ед.ч.) ИЛИ У вас была кошка(мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + V2(had)',
+        scheme: 'You + V2(had)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -581,7 +581,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'У него была кошка.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + V2(had)',
+        scheme: 'He/she/it + V2(had)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -598,7 +598,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'У них была кошка.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + V2(had)',
+        scheme: 'They + V2(had)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -617,7 +617,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'У меня не было кошки.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + did not + have(V1)',
+        scheme: 'I + did not + have(V1)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -634,7 +634,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'У нас не было кошки'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + did not + have(V1)',
+        scheme: 'We + did not + have(V1)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -651,7 +651,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'У тебя не было кошки(ед.ч.) ИЛИ У вас не было кошки(мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + did not + have(V1)',
+        scheme: 'You + did not + have(V1)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -668,7 +668,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'У него не было кошки.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + did not + have(V1)',
+        scheme: 'He/she/it + did not + have(V1)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -685,7 +685,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'У них не было кошки.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + did not + have(V1)',
+        scheme: 'They + did not + have(V1)',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -704,7 +704,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Я был инженером.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + was',
+        scheme: 'I + was',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -721,7 +721,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Мы были инженерами.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + were',
+        scheme: 'We + were',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -738,7 +738,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Ты был инженером(ед.ч.) ИЛИ Вы были инженерами(мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + were',
+        scheme: 'You + were',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -755,7 +755,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Он был инженером.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + was',
+        scheme: 'He/she/it + was',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -772,7 +772,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Они были инженерами.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + were',
+        scheme: 'They + were',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -791,7 +791,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Я не был инженером.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + was not',
+        scheme: 'I + was not',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -808,7 +808,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Мы не были инженерами.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + were not',
+        scheme: 'We + were not',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -825,7 +825,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Ты не был инженером(ед.ч.) ИЛИ Вы не были инженерами(мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + were not',
+        scheme: 'You + were not',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -842,7 +842,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Он не был инженером.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + was not',
+        scheme: 'He/she/it + was not',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -859,7 +859,7 @@ export const PAST_SIMPLE: Card[] = [
             ru: 'Они не были инженерами.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + were not',
+        scheme: 'They + were not',
         isTheoryShow: false,
         type: {
             voice: 'active',

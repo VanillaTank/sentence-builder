@@ -8,14 +8,14 @@
                 </span>
             </div>
             <div class="card-theory" *ngIf="card.theory" (click)="card.isTheoryShow = !card.isTheoryShow">
-                <div class="card-theory-toggle">Theory</div>
+                <div *ngIf="card.scheme" class="card-theory-toggle">Theory</div>
                 <div *ngIf="card.isTheoryShow">
                     {{card.theory}}
                 </div>
             </div>
-            <div class="card-schema"> Schema:<br>{{card.schema}}</div>
-            <div class="card-text-en">{{card.text.en}}</div>
-            <div class="card-text-ru">{{card.text.ru}}</div>
+            <div *ngIf="card.scheme" class="card-schema"> Scheme:<br>{{card.scheme}}</div>
+            <div *ngIf="card.text.en" class="card-text-en">{{card.text.en}}</div>
+            <div *ngIf="card.text.ru" class="card-text-ru">{{card.text.ru}}</div>
         </li>
     </ul>
 
@@ -28,14 +28,14 @@
                 </span>
             </div>
             <div class="card-theory" *ngIf="card.theory" (click)="card.isTheoryShow = !card.isTheoryShow">
-                <div class="card-theory-toggle">Theory</div>
+                <div *ngIf="card.scheme" class="card-theory-toggle">Theory</div>
                 <div *ngIf="card.isTheoryShow">
                     {{card.theory}}
                 </div>
             </div>
-            <div class="card-schema"> Schema:<br>{{card.schema}}</div>
-            <div class="card-text-en">{{card.text.en}}</div>
-            <div class="card-text-ru">{{card.text.ru}}</div>
+            <div *ngIf="card.scheme" class="card-schema"> Scheme:<br>{{card.scheme}}</div>
+            <div *ngIf="card.text.en" class="card-text-en">{{card.text.en}}</div>
+            <div *ngIf="card.text.ru" class="card-text-ru">{{card.text.ru}}</div>
         </li>
     </ul>
 </div>

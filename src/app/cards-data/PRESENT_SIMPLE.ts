@@ -8,7 +8,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Я работаю каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + V1',
+        scheme: 'I + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -25,7 +25,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Мы работаем каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + V1',
+        scheme: 'We + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -42,7 +42,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Ты работаешь каждый день. ИЛИ Вы работаете каждый день(во мн.ч.) (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + V1',
+        scheme: 'You + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -59,7 +59,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Он работает каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + V1+s/es',
+        scheme: 'He/she/it + V1+s/es',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -76,7 +76,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Они работают каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + V1',
+        scheme: 'They + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -95,7 +95,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Я не работаю каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + do not + V1',
+        scheme: 'I + do not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -112,7 +112,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Мы не работаем каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + do not + V1',
+        scheme: 'We + do not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -129,7 +129,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Ты не работаешь каждый день. ИЛИ Вы работаете каждый день(во мн.ч.) (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + do not + V1',
+        scheme: 'You + do not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -146,7 +146,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Он не работает каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + does not + V1',
+        scheme: 'He/she/it + does not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -163,7 +163,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Они не работают каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + do not + V1',
+        scheme: 'They + do not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -182,7 +182,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Я хожу каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + V1',
+        scheme: 'I + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -199,7 +199,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Мы ходим каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + V1',
+        scheme: 'We + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -216,7 +216,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Ты ходишь каждый день. ИЛИ Вы ходите каждый день(во мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + V1',
+        scheme: 'You + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -233,7 +233,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Он ходит каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + V1+s/es',
+        scheme: 'He/she/it + V1+s/es',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -250,7 +250,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Они ходят каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + V1',
+        scheme: 'They + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -269,7 +269,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Я не хожу каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + do not + V1',
+        scheme: 'I + do not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -286,7 +286,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Мы не ходмм каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + do not + V1',
+        scheme: 'We + do not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -303,7 +303,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Ты не ходишь каждый день(в ед.ч.) ИЛИ Вы ходите каждый день(во мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + do not + V1',
+        scheme: 'You + do not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -320,7 +320,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Он не ходит каждый день.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + does not + V1',
+        scheme: 'He/she/it + does not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -337,7 +337,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Они не ходят каждый день.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + do not + V1',
+        scheme: 'They + do not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -356,7 +356,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Я делаю это каждый день.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + do',
+        scheme: 'I + do',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -373,7 +373,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Мы делаем это каждый день.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + do',
+        scheme: 'We + do',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -390,7 +390,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Ты делаешь это каждый день. ИЛИ Вы делаете это каждый день(во мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + do',
+        scheme: 'You + do',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -407,7 +407,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Он делает это каждый день.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + does',
+        scheme: 'He/she/it + does',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -424,7 +424,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Они делают каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + do',
+        scheme: 'They + do',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -443,7 +443,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Я не делают это каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + do not + V1',
+        scheme: 'I + do not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -460,7 +460,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Мы не делаем это каждый день. (Обычно)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + do not + V1',
+        scheme: 'We + do not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -477,7 +477,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Ты не делаешь это каждый день(в ед.ч.) ИЛИ Вы делаете это каждый день(во мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + do not + V1',
+        scheme: 'You + do not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -494,7 +494,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Он не делает это каждый день.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + does not + V1',
+        scheme: 'He/she/it + does not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -511,7 +511,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Они не делают это каждый день.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + do not + V1',
+        scheme: 'They + do not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -530,7 +530,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'У меня есть кошка.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + have',
+        scheme: 'I + have',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -547,7 +547,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'У нас есть кошка'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + have',
+        scheme: 'We + have',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -564,7 +564,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'У тебя есть кошка(в ед.ч.)  ИЛИ У вас есть кошка(во мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + have',
+        scheme: 'You + have',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -581,7 +581,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'У него есть кошка'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + has',
+        scheme: 'He/she/it + has',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -598,7 +598,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'У них есть кошка.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + have',
+        scheme: 'They + have',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -617,7 +617,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'У меня нет кошки.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + do not + have',
+        scheme: 'I + do not + have',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -634,7 +634,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'У нас нет кошки'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + do not + have',
+        scheme: 'We + do not + have',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -651,7 +651,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'У тебя нет кошки(в ед.ч.) ИЛИ У вас нет кошки(во мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + do not + V1',
+        scheme: 'You + do not + V1',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -668,7 +668,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'У него нет кошки.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + does not + have',
+        scheme: 'He/she/it + does not + have',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -685,7 +685,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'У них нет кошки.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + do not + have',
+        scheme: 'They + do not + have',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -704,7 +704,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Я - инженер.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + am',
+        scheme: 'I + am',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -721,7 +721,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Мы инженеры.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + are',
+        scheme: 'We + are',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -738,7 +738,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Ты - инженер(в ед.ч.)  ИЛИ Вы - инженеры(во мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + are',
+        scheme: 'You + are',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -755,7 +755,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Он - инженер.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + is',
+        scheme: 'He/she/it + is',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -772,7 +772,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Они - инженеры.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + are',
+        scheme: 'They + are',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -791,7 +791,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Я не инженер.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'I + am not',
+        scheme: 'I + am not',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -808,7 +808,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Мы не инженеры.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'We + are not',
+        scheme: 'We + are not',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -825,7 +825,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Ты не инженер(в ед.ч.)  ИЛИ Вы не инженеры(во мн.ч.)'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'You + are not',
+        scheme: 'You + are not',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -842,7 +842,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Он не инженер.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'He/she/it + is not',
+        scheme: 'He/she/it + is not',
         isTheoryShow: false,
         type: {
             voice: 'active',
@@ -859,7 +859,7 @@ export const PRESENT_SIMPLE: Card[] = [
             ru: 'Они не инженеры.'
         },
         theory: 'Для фактов и обычных повседневных дел.',
-        schema: 'They + are not',
+        scheme: 'They + are not',
         isTheoryShow: false,
         type: {
             voice: 'active',
