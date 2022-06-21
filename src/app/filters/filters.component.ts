@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardsService } from '../cards-service.service';
-import { SearchItem, GeneralSearchValues } from './interfaces';
-import { GENERAL_SEARCH_ITEMS } from './SEARCH_ITEMS'
+import { GeneralSearchValues, SearchItemValues } from './interfaces';
+import { GENERAL_SEARCH_ITEMS } from '../filters-data/SEARCH_ITEMS'
 
 @Component({
   selector: 'app-filters',
@@ -11,15 +11,10 @@ import { GENERAL_SEARCH_ITEMS } from './SEARCH_ITEMS'
 
 export class FiltersComponent implements OnInit {
 
-  // General
-  voices: SearchItem[] = GENERAL_SEARCH_ITEMS.voices;
-  times: SearchItem[] = GENERAL_SEARCH_ITEMS.times;
-  typeTimes: SearchItem[] = GENERAL_SEARCH_ITEMS.typeTimes;
-  pronouns: SearchItem[] = GENERAL_SEARCH_ITEMS.pronoun;
-  verbs: SearchItem[] = GENERAL_SEARCH_ITEMS.verb;
-  sentenceTypes: SearchItem[] = GENERAL_SEARCH_ITEMS.sentenceType;
+ 
+  generals = GENERAL_SEARCH_ITEMS;
 
-  generalSearchValues: GeneralSearchValues = { 
+  generalSearchValues: GeneralSearchValues = {
     voice: [],
     time: [],
     timeType: [],
@@ -28,14 +23,18 @@ export class FiltersComponent implements OnInit {
     sentenceType: []
   };
 
-  constructor(private cardsService: CardsService) { }
+  constructor(public cardsService: CardsService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
 
-  changeCheckbox(list: SearchItem[], title: string):void {
+  }
+
+
+  changeCheckbox(list: SearchItemValues[], title: string): void {
+    title = title.toLowerCase();
     list
-      .map((el: SearchItem)  => {
-        if(el.checked && !this.generalSearchValues[title].includes(el.value)) {
+      .map((el: SearchItemValues) => {
+        if (el.checked && !this.generalSearchValues[title].includes(el.value)) {
           this.generalSearchValues[title].push(el.value);
         } else if (!el.checked && this.generalSearchValues[title].includes(el.value)) {
           const i = this.generalSearchValues[title].indexOf(el.value);

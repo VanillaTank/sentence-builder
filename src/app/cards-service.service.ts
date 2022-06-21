@@ -11,12 +11,23 @@ import { GeneralSearchValues } from '../app/filters/interfaces'
 })
 export class CardsService {
 
-  cards: Card[] = [...PRESENT_SIMPLE, ...PAST_SIMPLE, ...FUTURE_SIMPLE,
-    ...PRESENT_CONTINIOUS];
+  cards: Card[] = [
+    ...PRESENT_SIMPLE, ...PAST_SIMPLE, ...FUTURE_SIMPLE,
+    ...PRESENT_CONTINIOUS
+  ];
   //@ts-ignore
   selectedCards: Card[] | [] = this.cards;
+  activeFilter: string = "Generals";
 
   constructor() { }
+
+  updateActiveFilter(choosenFilter: string): void {
+    this.activeFilter = choosenFilter;
+  }  
+  
+  getActiveFilterName(): string {
+    return this.activeFilter;
+  }
 
   updateSelectedCards(query: GeneralSearchValues): void {
     this.selectedCards = this.cards.filter(card => {
@@ -41,4 +52,5 @@ export class CardsService {
       return true;
     })
   }
+
 }

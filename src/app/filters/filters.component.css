@@ -3,6 +3,7 @@
     background-color: #fff;
     border-radius: 4px;
     padding: 10px 15px 15px;
+    width: 100%;
 }
 .common-filter-title {
     color: #777B75;
@@ -19,7 +20,7 @@
 }
 
 .filter.general {
-    max-width: 850px;
+    width: 850px;
 }
 
 label {

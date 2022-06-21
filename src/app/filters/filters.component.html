@@ -1,66 +1,17 @@
 <div class="filter general">
-  <h3 class="common-filter-title">General</h3>
+  <h3 class="common-filter-title">{{cardsService.getActiveFilterName()}}</h3>
 
   <div class="filter-inner">
-    <section>
-      <h4 class="filter-title">Voice:</h4>
-      <div>
-        <label *ngFor="let voice of voices">
-          <input type="checkbox" [(ngModel)]="voice.checked" (change)="changeCheckbox(voices, 'voice')">{{ voice.value
-          }}
-        </label>
-      </div>
-    </section>
 
-    <section>
-      <h4 class="filter-title">Time:</h4>
+    <section *ngFor="let item of generals">
+      <h4 class="filter-title">{{item.title}}</h4>
       <div>
-        <label *ngFor="let time of times">
-          <input type="checkbox" [(ngModel)]="time.checked" (change)="changeCheckbox(times, 'time')">{{ time.value }}
-        </label>
-      </div>
-    </section>
-
-    <section>
-      <h4 class="filter-title">Type time:</h4>
-      <div>
-        <label *ngFor="let typeTime of typeTimes">
-          <input type="checkbox" [(ngModel)]="typeTime.checked" (change)="changeCheckbox(typeTimes, 'timeType')">{{
-          typeTime.value }}
-        </label>
-      </div>
-    </section>
-
-    <section>
-      <h4 class="filter-title">Pronoun:</h4>
-      <div>
-        <label *ngFor="let pronoun of pronouns">
-          <input type="checkbox" [(ngModel)]="pronoun.checked" (change)="changeCheckbox(pronouns, 'pronoun')">{{
-          pronoun.value }}
-        </label>
-      </div>
-    </section>
-
-    <section>
-      <h4 class="filter-title">Verb:</h4>
-      <div>
-        <label *ngFor="let verb of verbs">
-          <input type="checkbox" [(ngModel)]="verb.checked" (change)="changeCheckbox(verbs, 'verb')">{{ verb.value }}
-        </label>
-      </div>
-    </section>
-
-    <section>
-      <h4 class="filter-title">Sentence type:</h4>
-      <div>
-        <label *ngFor="let sentenceType of sentenceTypes">
-          <input type="checkbox" [(ngModel)]="sentenceType.checked"
-            (change)="changeCheckbox(sentenceTypes, 'sentenceType')"> {{ sentenceType.value }}
+        <label *ngFor="let it of item.values">
+          <input type="checkbox" [(ngModel)]="it.checked" (change)="changeCheckbox(item.values, item.title)">
+          {{ it.value}}
         </label>
       </div>
     </section>
   </div>
-
-
 
 </div>

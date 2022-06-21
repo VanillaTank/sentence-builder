@@ -1,6 +1,20 @@
 <div class="top-title">
     How to use it: Choose filter for sentence type -> choose sentense parameters -> Done
 </div>
-<app-filters></app-filters>
+
+<div class="filters-section">
+    <ul class="filters-list">
+        <li class="filter-list-title">Filter for sentence type</li>
+        <li 
+            class="filters-list-item"
+            [class.activeFilter]="f === activeFilter" 
+            *ngFor="let f of filterList" 
+            (click)="onFilterListItemClick(f)">
+            {{f}}
+        </li>
+    </ul>
+    <app-filters></app-filters>
+</div>
+
 <div class="line"></div>
 <app-cards-part></app-cards-part>
