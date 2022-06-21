@@ -1,5 +1,7 @@
-<div class="filter general">
+<div class="filter"
+  [class.general]="cardsService.getActiveFilterName() === 'Generals'" >
   <h3 class="common-filter-title">{{cardsService.getActiveFilterName()}}</h3>
+
 
   <div class="filter-inner">
 
@@ -7,7 +9,7 @@
       <h4 class="filter-title">{{item.title}}</h4>
       <div>
         <label *ngFor="let it of item.values">
-          <input type="checkbox" [(ngModel)]="it.checked" (change)="changeCheckbox(item.values, item.title)">
+          <input type="checkbox" [(ngModel)]="it.checked" (change)="changeCheckbox(item.values, item.id)">
           {{ it.value}}
         </label>
       </div>

@@ -1,6 +1,7 @@
 export const GENERAL_SEARCH_ITEMS = [
     {
         title: 'Voice',
+        id: 'voice',
         values: [
             { value: 'active', checked: false },
             { value: 'passive', checked: false }]
@@ -9,6 +10,7 @@ export const GENERAL_SEARCH_ITEMS = [
 
     {
         title: 'Time',
+        id: 'time',
         values:
             [
                 { value: 'past', checked: false },
@@ -18,6 +20,7 @@ export const GENERAL_SEARCH_ITEMS = [
 
     {
         title: 'Time Type',
+        id: 'timeType',
         values: [
             { value: 'simple', checked: false },
             { value: 'continious', checked: false },
@@ -27,6 +30,7 @@ export const GENERAL_SEARCH_ITEMS = [
 
     {
         title: 'Pronoun',
+        id: 'pronoun',
         values: [
             { value: 'I', checked: false },
             { value: 'we', checked: false },
@@ -37,6 +41,7 @@ export const GENERAL_SEARCH_ITEMS = [
 
     {
         title: 'Verb',
+        id: 'verb',
         values:[
         { value: 'regular', checked: false },
         { value: 'irregular', checked: false },
@@ -47,6 +52,7 @@ export const GENERAL_SEARCH_ITEMS = [
 
     {
         title: 'Sentence type',
+        id: 'sentenceType',
         values:[
         { value: 'statement', checked: false },
         { value: 'negation', checked: false },

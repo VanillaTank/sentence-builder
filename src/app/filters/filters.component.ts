@@ -31,7 +31,6 @@ export class FiltersComponent implements OnInit {
 
 
   changeCheckbox(list: SearchItemValues[], title: string): void {
-    title = title.toLowerCase();
     list
       .map((el: SearchItemValues) => {
         if (el.checked && !this.generalSearchValues[title].includes(el.value)) {

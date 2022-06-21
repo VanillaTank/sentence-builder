@@ -17,7 +17,6 @@
 
 .filters-section {
     display: flex;
-    justify-content: space-between;
 }
 
 .filters-list {
@@ -27,6 +26,7 @@
     max-width: 300px;
     width: 100%;
     padding: 10px 15px;
+    margin-right: 30px;
 }
 
 .filters-list-item {
