@@ -1,11 +1,13 @@
 export interface SearchItem {
-    title: string,
+    title: string
+    id: string
     values: SearchItemValues[]
     
 }
 
 export interface SearchItemValues {
-    value: string, checked: boolean
+    value: string,
+    checked: boolean
 }
 
 export interface GeneralSearchValues {

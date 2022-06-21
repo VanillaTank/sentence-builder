@@ -24,6 +24,11 @@ export class CardsService {
   updateActiveFilter(choosenFilter: string): void {
     this.activeFilter = choosenFilter;
   }  
+
+  getAllCards():void {
+    //TODO определить, из какого фильтра я получаю карточки, когда будут другие фильтры
+    this.selectedCards = this.cards;
+  }
   
   getActiveFilterName(): string {
     return this.activeFilter;

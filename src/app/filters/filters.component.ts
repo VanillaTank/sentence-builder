@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CardsService } from '../cards-service.service';
-import { GeneralSearchValues, SearchItemValues } from './interfaces';
+import { SearchItem, GeneralSearchValues, SearchItemValues } from './interfaces';
 import { GENERAL_SEARCH_ITEMS } from '../filters-data/SEARCH_ITEMS'
 
 @Component({
@@ -10,10 +10,12 @@ import { GENERAL_SEARCH_ITEMS } from '../filters-data/SEARCH_ITEMS'
 })
 
 export class FiltersComponent implements OnInit {
+  generals:SearchItem[]  = GENERAL_SEARCH_ITEMS;
 
- 
-  generals = GENERAL_SEARCH_ITEMS;
+  // TODO переписать на динамическое создание когда смогу подписаться на изменение вида фильтра
+  actviveFilter:SearchItem[] = this.generals;
 
+  // TODO переписать на динамическое создание когда смогу подписаться на изменение вида фильтра
   generalSearchValues: GeneralSearchValues = {
     voice: [],
     time: [],
@@ -25,10 +27,16 @@ export class FiltersComponent implements OnInit {
 
   constructor(public cardsService: CardsService) { }
 
-  ngOnInit() {
+  ngOnInit() {}
 
+  onClearBtnClick():void {
+    this.actviveFilter.map(item => {
+      item.values.map(it => it.checked = false)
+    })
+    this.cardsService.getAllCards()
   }
 
+  //TODO написать метод получения всех карточек после очистки чекбоксов
 
   changeCheckbox(list: SearchItemValues[], title: string): void {
     list

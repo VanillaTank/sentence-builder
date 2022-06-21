@@ -1,4 +1,6 @@
-export const GENERAL_SEARCH_ITEMS = [
+import {SearchItem} from '../filters/interfaces'
+
+export const GENERAL_SEARCH_ITEMS: SearchItem[] = [
     {
         title: 'Voice',
         id: 'voice',

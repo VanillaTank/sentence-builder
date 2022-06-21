@@ -4,6 +4,25 @@
     border-radius: 4px;
     padding: 10px 15px 15px;
     width: 100%;
+    position: relative;
+}
+
+.filter-clear-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e4e4e4;
+    cursor: pointer;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    display: inline-block;
+    padding: 0px 6px;
+    transition: .2s;
+}
+.filter-clear-btn:hover {
+    background-color: #cacaca;
 }
 .common-filter-title {
     color: #777B75;
@@ -20,7 +39,7 @@
 }
 
 .filter.general {
-    width: 850px;
+    width: 870px;
 }
 
 label {
