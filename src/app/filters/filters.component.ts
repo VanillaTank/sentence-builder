@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChange } from '@angular/core';
 import { CardsService } from '../cards-service.service';
-import { SearchItem, GeneralSearchValues, SearchItemValues } from './interfaces';
-import { GENERAL_SEARCH_ITEMS } from '../filters-data/SEARCH_ITEMS'
+import { SearchItem, ConditionSearchValues, GeneralSearchValues, SearchItemValues } from './interfaces';
 
 @Component({
   selector: 'app-filters',
@@ -10,12 +9,9 @@ import { GENERAL_SEARCH_ITEMS } from '../filters-data/SEARCH_ITEMS'
 })
 
 export class FiltersComponent implements OnInit {
-  generals:SearchItem[]  = GENERAL_SEARCH_ITEMS;
+  //@ts-ignore
+  @Input() activeFilterName: string;
 
-  // TODO переписать на динамическое создание когда смогу подписаться на изменение вида фильтра
-  actviveFilter:SearchItem[] = this.generals;
-
-  // TODO переписать на динамическое создание когда смогу подписаться на изменение вида фильтра
   generalSearchValues: GeneralSearchValues = {
     voice: [],
     time: [],
@@ -25,29 +21,56 @@ export class FiltersComponent implements OnInit {
     sentenceType: []
   };
 
+  conditionSearchValues: ConditionSearchValues = {
+    ifClauseTime: [],
+    ifClauseSentenceType: [],
+    ifClausePronoun: [],
+    mainClauseTime: [],
+    mainClauseSentenceType: [],
+    mainClausePronoun: []
+  };
+
+  //TODO добавлять новые виды поисковой строки сюда
+
+  activeSearchValue: GeneralSearchValues | ConditionSearchValues = this.generalSearchValues;
+
   constructor(public cardsService: CardsService) { }
 
-  ngOnInit() {}
-
-  onClearBtnClick():void {
-    this.actviveFilter.map(item => {
-      item.values.map(it => it.checked = false)
-    })
-    this.cardsService.getAllCards()
+  ngOnInit() {
   }
 
-  //TODO написать метод получения всех карточек после очистки чекбоксов
+  ngOnChanges(changes: SimpleChange):void {
+    //@ts-ignore
+    this.changeActiveSearchValue(changes.activeFilterName.currentValue)
+  }
+
+  changeActiveSearchValue(currentFilter: string):void {
+    switch (currentFilter) {
+      case 'Generals': this.activeSearchValue = this.generalSearchValues; break;
+      case 'Condinions': this.activeSearchValue = this.conditionSearchValues; break;
+      default: break;
+    }
+  }
+
+  onClearBtnClick(actviveFilterItem: SearchItem[]): void {
+    actviveFilterItem.map(item => {
+      item.values.map(it => it.checked = false)
+    })
+    this.cardsService.getAllCards();
+    this.changeActiveSearchValue(this.cardsService.getActiveFilterName())
+   
+  }
 
   changeCheckbox(list: SearchItemValues[], title: string): void {
     list
       .map((el: SearchItemValues) => {
-        if (el.checked && !this.generalSearchValues[title].includes(el.value)) {
-          this.generalSearchValues[title].push(el.value);
-        } else if (!el.checked && this.generalSearchValues[title].includes(el.value)) {
-          const i = this.generalSearchValues[title].indexOf(el.value);
-          this.generalSearchValues[title].splice(i, 1);
+        if (el.checked && !this.activeSearchValue[title].includes(el.value)) {
+          this.activeSearchValue[title].push(el.value);
+        } else if (!el.checked && this.activeSearchValue[title].includes(el.value)) {
+          const i = this.activeSearchValue[title].indexOf(el.value);
+          this.activeSearchValue[title].splice(i, 1);
         }
       });
-    this.cardsService.updateSelectedCards(this.generalSearchValues);
+    this.cardsService.updateSelectedCards(this.activeSearchValue);
   }
 }

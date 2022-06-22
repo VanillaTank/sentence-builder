@@ -8,7 +8,9 @@ import { CardsService } from './cards-service.service';
 })
 export class AppComponent {
   title = 'some-project';
-  filterList: string[] = ['Generals', 'Condinions', 'Questions', 'Would', 'Побудительные'];
+  filterList: string[] = ['Generals', 'Condinions', 
+  //'Questions', 'Would', 'Побудительные'
+];
 
   activeFilter: string = this.filterList[0];
 

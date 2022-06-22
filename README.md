@@ -1,19 +1,12 @@
 # SomeProject
+The project was created for my learning JS and english.
+It will halp you check yourself about english structure sentences.
+I going to gain amount of filters to make my app as comprehensive as possible.
+To use it, go to [here](). 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### To add new filter and data
+1. Add filter name (like 'Generals' or 'Conditions') to `app.component.ts` to `filterList`. 
+2. Create filter items in `filter-data` folder -> `SEARCH_ITEM.ts`. (Like 'Time' and 'past', 'present', 'future')
+3. Create data in `cards-data` folder in a new .ts file.
+4. Import the new files in `card-service.service.ts` to places marked with comments 
+// ADD NEW CARD DATA HERE and //ADD NEW FILTER DATA HERE

@@ -1,58 +1,65 @@
 import { Injectable } from '@angular/core';
-import { Card } from './card';
+import { Card, ConditionCard } from './card';
 import { PRESENT_SIMPLE } from './cards-data/PRESENT_SIMPLE';
 import { PAST_SIMPLE } from './cards-data/PAST_SIMPLE';
 import { PRESENT_CONTINIOUS } from './cards-data/PRESENT_CONTINIOUS';
 import { FUTURE_SIMPLE } from './cards-data/FUTURE_SIMPLE';
-import { GeneralSearchValues } from '../app/filters/interfaces'
+import { CONDITIONAL_CARDS } from './cards-data/CONDITION';
+import { GeneralSearchValues, ConditionSearchValues, SearchItem } from '../app/filters/interfaces'
+import {GENERAL_SEARCH_ITEMS, CONDITION_SEARCH_ITEMS} from './filters-data/SEARCH_ITEMS'
 
 @Injectable({
   providedIn: 'root'
 })
 export class CardsService {
 
-  cards: Card[] = [
+  // ADD NEW CARD DATA HERE
+  GENERAL_CARDS: Card[] = [
     ...PRESENT_SIMPLE, ...PAST_SIMPLE, ...FUTURE_SIMPLE,
     ...PRESENT_CONTINIOUS
   ];
-  //@ts-ignore
-  selectedCards: Card[] | [] = this.cards;
-  activeFilter: string = "Generals";
+  CONDITIONAL_CARDS: ConditionCard[] = CONDITIONAL_CARDS;
+
+  activeCards: any[] = this.GENERAL_CARDS;
+
+  //@ts-ignore   //INITIAL VALUES
+  selectedCards: Card[] | [] = this.activeCards;
+  activeFilterName: string = "Generals";
 
   constructor() { }
 
-  updateActiveFilter(choosenFilter: string): void {
-    this.activeFilter = choosenFilter;
+  updateActiveFilter(choosenFilter: string):void {
+    this.activeFilterName = choosenFilter;
+    switch (this.activeFilterName) {
+      case 'Generals': this.activeCards = this.GENERAL_CARDS; break;
+      case 'Condinions': this.activeCards = this.CONDITIONAL_CARDS; break;
+      //ADD NEW FILTER DATA HERE
+      default: this.activeCards = this.GENERAL_CARDS;
+    }
+    this.selectedCards = this.activeCards;
   }  
 
   getAllCards():void {
-    //TODO определить, из какого фильтра я получаю карточки, когда будут другие фильтры
-    this.selectedCards = this.cards;
+    this.selectedCards = this.activeCards;
   }
   
-  getActiveFilterName(): string {
-    return this.activeFilter;
+  getActiveFilterName():string {
+    return this.activeFilterName;
   }
 
-  updateSelectedCards(query: GeneralSearchValues): void {
-    this.selectedCards = this.cards.filter(card => {
-      if (query.voice.length > 0 && !query.voice.includes(card.type.voice)) {
-        return false;
-      }
-      if (query.time.length > 0 && !query.time.includes(card.type.time)) {
-        return false;
-      }
-      if (query.timeType.length > 0 && !query.timeType.includes(card.type.timeType)) {
-        return false;
-      }
-      if (query.pronoun.length > 0 && !query.pronoun.includes(card.type.pronoun)) {
-        return false;
-      }
-      if (query.verb.length > 0 && !query.verb.includes(card.type.verb)) {
-        return false;
-      }
-      if (query.sentenceType.length > 0 && !query.sentenceType.includes(card.type.sentenceType)) {
-        return false;
+  actviveFilterItem():SearchItem[]  {
+    switch (this.activeFilterName) {
+      case 'Generals': return GENERAL_SEARCH_ITEMS;
+      case 'Condinions': return CONDITION_SEARCH_ITEMS; 
+      //TODO дописать сюда путь к элементам фильтра, когда будут данные
+      default: return GENERAL_SEARCH_ITEMS;
+    }
+  }
+
+  updateSelectedCards(query:  GeneralSearchValues | ConditionSearchValues): void {
+    this.selectedCards = this.activeCards.filter(card => {
+      for(let q in query) {
+        if (query[q].length > 0 && !query[q].includes(card.type[q])) { return false }
       }
       return true;
     })

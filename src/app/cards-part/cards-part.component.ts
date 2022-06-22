@@ -19,7 +19,7 @@ export class CardsPartComponent implements OnInit {
   getMidOfArr(arr: any[]): number {
     if(arr.length === 1) return 1
     if(arr.length % 2 === 0) return arr.length/2
-    return Math.floor(arr.length/2)
+    return Math.ceil(arr.length/2)
   }
 
 }

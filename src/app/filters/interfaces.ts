@@ -19,3 +19,13 @@ export interface GeneralSearchValues {
     verb: string[]
     sentenceType: string[]
 }
+
+export interface ConditionSearchValues {
+    [key: string]: string[]
+    ifClauseTime: string[]
+    ifClauseSentenceType: string[]
+    ifClausePronoun: string[]
+    mainClauseTime: string[]
+    mainClauseSentenceType: string[]
+    mainClausePronoun: string[]
+}

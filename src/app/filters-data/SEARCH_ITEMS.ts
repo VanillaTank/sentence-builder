@@ -60,3 +60,63 @@ export const GENERAL_SEARCH_ITEMS: SearchItem[] = [
         { value: 'negation', checked: false },
     ]}
 ]
+
+export const CONDITION_SEARCH_ITEMS: SearchItem[] = [
+    {
+        title: 'Conditional Time',
+        id: 'ifClauseTime',
+        values: [
+            { value: 'past', checked: false },
+            { value: 'present', checked: false },
+            { value: 'future', checked: false }]
+    },
+
+    {
+        title: 'Conditional sentence type',
+        id: 'ifClauseSentenceType',
+        values:[
+        { value: 'statement', checked: false },
+        { value: 'negation', checked: false },
+    ]},
+
+    {
+        title: 'Conditional pronoun',
+        id: 'ifClausePronoun',
+        values: [
+            { value: 'I', checked: false },
+            { value: 'we', checked: false },
+            { value: 'you', checked: false },
+            { value: 'he, she, it', checked: false },
+            { value: 'they', checked: false }]
+    },
+
+    {
+        title: 'Main Time',
+        id: 'mainClauseTime',
+        values: [
+            { value: 'past', checked: false },
+            { value: 'present', checked: false },
+            { value: 'future', checked: false }]
+    },
+
+    {
+        title: 'Main Sentence type',
+        id: 'mainClauseSentenceType',
+        values:[
+        { value: 'statement', checked: false },
+        { value: 'negation', checked: false },
+    ]},
+
+    {
+        title: 'Main pronoun',
+        id: 'mainClausePronoun',
+        values: [
+            { value: 'I', checked: false },
+            { value: 'we', checked: false },
+            { value: 'you', checked: false },
+            { value: 'he, she, it', checked: false },
+            { value: 'they', checked: false }]
+    },
+
+
+]

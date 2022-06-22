@@ -3,12 +3,12 @@
   <h3 class="common-filter-title">{{cardsService.getActiveFilterName()}}</h3>
   <button 
     class="filter-clear-btn"
-    (click)="onClearBtnClick()"
+    (click)="onClearBtnClick(cardsService.actviveFilterItem())"
   >Clear</button>
 
   <div class="filter-inner">
 
-    <section *ngFor="let item of actviveFilter">
+    <section class="filter-section" *ngFor="let item of cardsService.actviveFilterItem()">
       <h4 class="filter-title">{{item.title}}</h4>
       <div>
         <label *ngFor="let it of item.values">

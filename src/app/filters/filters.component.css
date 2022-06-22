@@ -28,6 +28,9 @@
     color: #777B75;
     margin-bottom: 6px;
 }
+.filter-section+.filter-section{
+    margin-left: 30px;
+}
 .filter-title {
    font-weight: 700;
    margin-bottom: 4px;
@@ -36,10 +39,6 @@
 .filter-inner {
     display: flex;
     justify-content: space-between;
-}
-
-.filter.general {
-    width: 870px;
 }
 
 label {
