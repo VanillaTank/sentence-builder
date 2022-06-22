@@ -36,6 +36,9 @@ export class CardsService {
       //ADD NEW FILTER DATA HERE
       default: this.activeCards = this.GENERAL_CARDS;
     }
+    this.actviveFilterItem().map(item => {
+      item.values.map(it => it.checked = false)
+    })
     this.selectedCards = this.activeCards;
   }  
 

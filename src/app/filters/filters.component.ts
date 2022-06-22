@@ -30,7 +30,7 @@ export class FiltersComponent implements OnInit {
     mainClausePronoun: []
   };
 
-  //TODO добавлять новые виды поисковой строки сюда
+  //ADD NEW KIND OF SEARCH VALUES HERE (like generalSearchValues)
 
   activeSearchValue: GeneralSearchValues | ConditionSearchValues = this.generalSearchValues;
 
