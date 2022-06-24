@@ -1,9 +1,8 @@
 #!/bin/bash
 
 ng build --output-path docs --base-href https://vanillatank.github.io/sentence-builder/
+cp ./docs/index.html ./docs/404.html
 
-#ng build --base-href C:/Users/Tanya/Desktop/personal-project/sentence-builder/docs/ --cross-origin anonymous
-#
 #rm -R ./docs
 #echo 'docs folder deleted'
 #mkdir ./docs
@@ -12,7 +11,7 @@ ng build --output-path docs --base-href https://vanillatank.github.io/sentence-b
 #cp ./dist/some-project/* ./docs
 #echo 'files are copied'
 
-#git add ./docs/*
-#git commit -m 'update site'
-#git push
-#echo 'site is pushed'
+git add .
+git commit -m 'update site'
+git push
+echo 'site is pushed'
