@@ -2,7 +2,7 @@
 The project was created for my learning JS and english.
 It will halp you check yourself about english structure sentences.
 I going to gain amount of filters to make my app as comprehensive as possible.
-To use it, go to [here](). 
+To use it, go to [here](https://vanillatank.github.io/sentence-builder/). 
 
 ### To add new filter and data
 1. Add filter name (like 'Generals' or 'Conditions') to `app.component.ts` to `filterList`. 
