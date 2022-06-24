@@ -54,7 +54,7 @@ export class CardsService {
     switch (this.activeFilterName) {
       case 'Generals': return GENERAL_SEARCH_ITEMS;
       case 'Condinions': return CONDITION_SEARCH_ITEMS; 
-      //TODO дописать сюда путь к элементам фильтра, когда будут данные
+      // ADD PATH TO SEARCH VALUES
       default: return GENERAL_SEARCH_ITEMS;
     }
   }

@@ -9,7 +9,7 @@ import { CardsService } from './cards-service.service';
 export class AppComponent {
   title = 'some-project';
   filterList: string[] = ['Generals', 'Condinions', 
-  //'Questions', 'Would', 'Побудительные'
+  // ADD NEW FILTER TYPE
 ];
 
   activeFilter: string = this.filterList[0];
