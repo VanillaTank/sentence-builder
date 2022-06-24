@@ -5,7 +5,7 @@ export const CONDITIONAL_CARDS: ConditionCard[] = [
     {
         text: {
             en: '',
-            ru: 'If your name is Kirill you are a good boy. '
+            ru: 'If your name is Kirill you are a good boy.'
         },
         theory: '',
         scheme: '',
@@ -23,7 +23,7 @@ export const CONDITIONAL_CARDS: ConditionCard[] = [
     {
         text: {
             en: '',
-            ru: 'If I go to the party, I will be happy. '
+            ru: 'If I go to the party, I will be happy.'
         },
         theory: '',
         scheme: '',
@@ -40,7 +40,7 @@ export const CONDITIONAL_CARDS: ConditionCard[] = [
     {
         text: {
             en: '',
-            ru: 'If your name is Kirill you are a good boy. '
+            ru: 'If your name is Kirill you are a good boy.'
         },
         theory: '',
         scheme: '',
