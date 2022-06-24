@@ -7,7 +7,7 @@ To use it, go to [here](https://vanillatank.github.io/sentence-builder/).
 ### To add new filter and data
 1. Add filter name (like 'Generals' or 'Conditions') to `app.component.ts` to `filterList`. 
 
-2. Create filter items in `filter-data` folder -> `SEARCH_ITEM.ts`. (Like 'Time' and 'past', 'present', 'future') to array marked with comment
+2. Create filter items in `filter-data` folder -> `SEARCH_ITEM.ts`. (Like 'Time' and 'past', 'present', 'future') to array marked with comment  
 // ADD NEW FILTER TYPE
 
 3. Create data in `cards-data` folder in a new .ts file.
