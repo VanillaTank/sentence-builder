@@ -32,7 +32,7 @@ export class CardsService {
     this.activeFilterName = choosenFilter;
     switch (this.activeFilterName) {
       case 'Generals': this.activeCards = this.GENERAL_CARDS; break;
-      case 'Condinions': this.activeCards = this.CONDITIONAL_CARDS; break;
+      case 'Conditional': this.activeCards = this.CONDITIONAL_CARDS; break;
       //ADD NEW FILTER DATA HERE
       default: this.activeCards = this.GENERAL_CARDS;
     }
@@ -53,7 +53,7 @@ export class CardsService {
   actviveFilterItem():SearchItem[]  {
     switch (this.activeFilterName) {
       case 'Generals': return GENERAL_SEARCH_ITEMS;
-      case 'Condinions': return CONDITION_SEARCH_ITEMS;
+      case 'Conditional': return CONDITION_SEARCH_ITEMS;
       //TODO дописать сюда путь к элементам фильтра, когда будут данные
       default: return GENERAL_SEARCH_ITEMS;
     }

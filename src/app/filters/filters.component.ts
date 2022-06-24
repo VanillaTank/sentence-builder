@@ -47,7 +47,7 @@ export class FiltersComponent implements OnInit {
   changeActiveSearchValue(currentFilter: string):void {
     switch (currentFilter) {
       case 'Generals': this.activeSearchValue = this.generalSearchValues; break;
-      case 'Condinions': this.activeSearchValue = this.conditionSearchValues; break;
+      case 'Conditional': this.activeSearchValue = this.conditionSearchValues; break;
       default: break;
     }
   }
@@ -58,7 +58,7 @@ export class FiltersComponent implements OnInit {
     })
     this.cardsService.getAllCards();
     this.changeActiveSearchValue(this.cardsService.getActiveFilterName())
-   
+
   }
 
   changeCheckbox(list: SearchItemValues[], title: string): void {
