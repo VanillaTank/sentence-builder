@@ -1,7 +1,7 @@
 import { Card } from "../card"
 
-export const PRESENT_CONTINIOUS: Card[] = [
-    // Active Present Continious regular statement
+export const PRESENT_CONTINUOUS: Card[] = [
+    // Active Present Continuous regular statement
     {
         text: {
             en: 'I am working now.',
@@ -13,7 +13,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'I',
             verb: 'regular',
             sentenceType: 'statement',
@@ -30,7 +30,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'we',
             verb: 'regular',
             sentenceType: 'statement',
@@ -47,7 +47,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'you',
             verb: 'regular',
             sentenceType: 'statement',
@@ -64,7 +64,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'he, she, it',
             verb: 'regular',
             sentenceType: 'statement',
@@ -81,14 +81,14 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'they',
             verb: 'regular',
             sentenceType: 'statement',
         }
     },
 
-    // Active Present Continious regular negation
+    // Active Present continuous regular negation
     {
         text: {
             en: 'I am not working now.',
@@ -100,7 +100,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'I',
             verb: 'regular',
             sentenceType: 'negation',
@@ -117,7 +117,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'we',
             verb: 'regular',
             sentenceType: 'negation',
@@ -134,7 +134,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'you',
             verb: 'regular',
             sentenceType: 'negation',
@@ -151,7 +151,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'he, she, it',
             verb: 'regular',
             sentenceType: 'negation',
@@ -168,14 +168,14 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'they',
             verb: 'regular',
             sentenceType: 'negation',
         }
     },
 
-    // Active Present Continious irregular statement
+    // Active Present continuous irregular statement
     {
         text: {
             en: 'I am going now.',
@@ -187,7 +187,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'I',
             verb: 'irregular',
             sentenceType: 'statement',
@@ -204,7 +204,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'we',
             verb: 'regular',
             sentenceType: 'statement',
@@ -221,7 +221,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'you',
             verb: 'regular',
             sentenceType: 'statement',
@@ -238,7 +238,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'he, she, it',
             verb: 'regular',
             sentenceType: 'statement',
@@ -255,14 +255,14 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'they',
             verb: 'regular',
             sentenceType: 'statement',
         }
     },
 
-    // Active Present Continious irregular negation
+    // Active Present continuous irregular negation
     {
         text: {
             en: 'I am not going now.',
@@ -274,7 +274,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'I',
             verb: 'irregular',
             sentenceType: 'negation',
@@ -291,7 +291,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'we',
             verb: 'irregular',
             sentenceType: 'negation',
@@ -308,7 +308,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'you',
             verb: 'irregular',
             sentenceType: 'negation',
@@ -325,7 +325,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'he, she, it',
             verb: 'irregular',
             sentenceType: 'negation',
@@ -342,14 +342,14 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'they',
             verb: 'irregular',
             sentenceType: 'negation',
         }
     },
 
-    // Active Present Continious to do statement
+    // Active Present continuous to do statement
     {
         text: {
             en: 'I am doing it now.',
@@ -361,7 +361,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'I',
             verb: 'to do',
             sentenceType: 'statement',
@@ -378,7 +378,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'we',
             verb: 'to do',
             sentenceType: 'statement',
@@ -395,7 +395,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'you',
             verb: 'to do',
             sentenceType: 'statement',
@@ -412,7 +412,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'he, she, it',
             verb: 'to do',
             sentenceType: 'statement',
@@ -429,14 +429,14 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'they',
             verb: 'to do',
             sentenceType: 'statement',
         }
     },
 
-    // Active Present Continious to do negation
+    // Active Present continuous to do negation
     {
         text: {
             en: 'I am not doing it now.',
@@ -448,7 +448,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'I',
             verb: 'to do',
             sentenceType: 'negation',
@@ -465,7 +465,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'we',
             verb: 'to do',
             sentenceType: 'negation',
@@ -482,7 +482,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'you',
             verb: 'to do',
             sentenceType: 'negation',
@@ -499,7 +499,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'he, she, it',
             verb: 'to do',
             sentenceType: 'negation',
@@ -516,14 +516,14 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'they',
             verb: 'to do',
             sentenceType: 'negation',
         }
     },
 
-    // Active Present Continious to have statement
+    // Active Present continuous to have statement
     {
         text: {
             en: '',
@@ -535,7 +535,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'I',
             verb: 'to have',
             sentenceType: 'statement',
@@ -552,7 +552,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'we',
             verb: 'to have',
             sentenceType: 'statement',
@@ -569,7 +569,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'you',
             verb: 'to have',
             sentenceType: 'statement',
@@ -586,7 +586,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'he, she, it',
             verb: 'to have',
             sentenceType: 'statement',
@@ -603,14 +603,14 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'they',
             verb: 'to have',
             sentenceType: 'statement',
         }
     },
 
-    // Active Present Continious to have negation
+    // Active Present continuous to have negation
     {
         text: {
             en: '',
@@ -622,7 +622,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'I',
             verb: 'to have',
             sentenceType: 'negation',
@@ -639,7 +639,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'we',
             verb: 'to have',
             sentenceType: 'negation',
@@ -656,7 +656,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'you',
             verb: 'to have',
             sentenceType: 'negation',
@@ -673,7 +673,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'he, she, it',
             verb: 'to have',
             sentenceType: 'negation',
@@ -690,14 +690,14 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'they',
             verb: 'to have',
             sentenceType: 'negation',
         }
     },
 
-     // Active Present Continious to be statement
+     // Active Present continuous to be statement
     {
         text: {
             en: '',
@@ -709,7 +709,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'I',
             verb: 'to be',
             sentenceType: 'statement',
@@ -726,7 +726,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'we',
             verb: 'to be',
             sentenceType: 'statement',
@@ -743,7 +743,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'you',
             verb: 'to be',
             sentenceType: 'statement',
@@ -760,7 +760,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'he, she, it',
             verb: 'to be',
             sentenceType: 'statement',
@@ -777,14 +777,14 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'they',
             verb: 'to be',
             sentenceType: 'statement',
         }
     },
 
-    // Active Present Continious to be negation
+    // Active Present continuous to be negation
     {
         text: {
             en: '',
@@ -796,7 +796,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'I',
             verb: 'to be',
             sentenceType: 'negation',
@@ -813,7 +813,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'we',
             verb: 'to be',
             sentenceType: 'negation',
@@ -830,7 +830,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'you',
             verb: 'to be',
             sentenceType: 'negation',
@@ -847,7 +847,7 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'he, she, it',
             verb: 'to be',
             sentenceType: 'negation',
@@ -864,11 +864,11 @@ export const PRESENT_CONTINIOUS: Card[] = [
         type: {
             voice: 'active',
             time: 'present',
-            timeType: 'continious',
+            timeType: 'continuous',
             pronoun: 'they',
             verb: 'to be',
             sentenceType: 'negation',
         }
     },
-   
+
 ]

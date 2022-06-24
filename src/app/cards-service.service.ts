@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { Card, ConditionCard } from './card';
 import { PRESENT_SIMPLE } from './cards-data/PRESENT_SIMPLE';
 import { PAST_SIMPLE } from './cards-data/PAST_SIMPLE';
-import { PRESENT_CONTINIOUS } from './cards-data/PRESENT_CONTINIOUS';
+import { PRESENT_CONTINUOUS } from './cards-data/PRESENT_CONTINIOUS';
 import { FUTURE_SIMPLE } from './cards-data/FUTURE_SIMPLE';
 import { CONDITIONAL_CARDS } from './cards-data/CONDITION';
-import { GeneralSearchValues, ConditionSearchValues, SearchItem } from '../app/filters/interfaces'
+import { GeneralSearchValues, ConditionSearchValues, SearchItem } from './filters/interfaces'
 import {GENERAL_SEARCH_ITEMS, CONDITION_SEARCH_ITEMS} from './filters-data/SEARCH_ITEMS'
 
 @Injectable({
@@ -16,7 +16,7 @@ export class CardsService {
   // ADD NEW CARD DATA HERE
   GENERAL_CARDS: Card[] = [
     ...PRESENT_SIMPLE, ...PAST_SIMPLE, ...FUTURE_SIMPLE,
-    ...PRESENT_CONTINIOUS
+    ...PRESENT_CONTINUOUS
   ];
   CONDITIONAL_CARDS: ConditionCard[] = CONDITIONAL_CARDS;
 
@@ -40,12 +40,12 @@ export class CardsService {
       item.values.map(it => it.checked = false)
     })
     this.selectedCards = this.activeCards;
-  }  
+  }
 
   getAllCards():void {
     this.selectedCards = this.activeCards;
   }
-  
+
   getActiveFilterName():string {
     return this.activeFilterName;
   }
@@ -53,7 +53,7 @@ export class CardsService {
   actviveFilterItem():SearchItem[]  {
     switch (this.activeFilterName) {
       case 'Generals': return GENERAL_SEARCH_ITEMS;
-      case 'Condinions': return CONDITION_SEARCH_ITEMS; 
+      case 'Condinions': return CONDITION_SEARCH_ITEMS;
       //TODO дописать сюда путь к элементам фильтра, когда будут данные
       default: return GENERAL_SEARCH_ITEMS;
     }

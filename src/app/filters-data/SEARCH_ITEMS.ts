@@ -25,9 +25,9 @@ export const GENERAL_SEARCH_ITEMS: SearchItem[] = [
         id: 'timeType',
         values: [
             { value: 'simple', checked: false },
-            { value: 'continious', checked: false },
+            { value: 'continuous', checked: false },
             { value: 'perfect', checked: false },
-            { value: 'perfect continious', checked: false }]
+            { value: 'perfect continuous', checked: false }]
     },
 
     {
