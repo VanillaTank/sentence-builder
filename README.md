@@ -20,3 +20,9 @@ To use it, go to [here](https://vanillatank.github.io/sentence-builder/).
 
 6. Add path to search values in `card-service.service.ts` to places marked with comment  
 // ADD PATH TO SEARCH VALUES 
+
+
+### How add new card data to existing filter
+1. Create a new .ts file with your card data in `cards-data`
+2. Import it to `card-service.service.ts`
+3. Unwrap data to appreciate array (to `GENERAL_CARDS` an example)
