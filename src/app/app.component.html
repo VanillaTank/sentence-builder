@@ -1,19 +1,19 @@
 <div class="top-title">
-    How to use it: Choose filter for sentence type -> choose sentense parameters -> Done
+    How to use it: Choose filter type -> choose sentense parameters -> Done
 </div>
 
 <div class="filters-section">
     <ul class="filters-list">
-        <li class="filter-list-title">Filter for sentence type</li>
-        <li 
+        <li class="filter-list-title">Filter types</li>
+        <li
             class="filters-list-item"
-            [class.activeFilter]="f === activeFilter" 
-            *ngFor="let f of filterList" 
+            [class.activeFilter]="f === activeFilter"
+            *ngFor="let f of filterList"
             (click)="onFilterListItemClick(f)">
             {{f}}
         </li>
     </ul>
-    <app-filters [activeFilterName]="activeFilter" [ngStyle]="{flexGrow: 1}"></app-filters> 
+    <app-filters [activeFilterName]="activeFilter" [ngStyle]="{flexGrow: 1}"></app-filters>
 </div>
 
 <div class="line"></div>

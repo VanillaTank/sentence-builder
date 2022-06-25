@@ -603,7 +603,7 @@ export const PAST_CONTINUOUS: Card[] = [
     isTheoryShow: true,
     type: {
       voice: 'active',
-      time: 'present',
+      time: 'past',
       timeType: 'continuous',
       pronoun: 'they',
       verb: 'to have',
