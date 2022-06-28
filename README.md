@@ -10,15 +10,17 @@ To use it, go to [here](https://vanillatank.github.io/sentence-builder/).
 2. Create filter items in `filter-data` folder -> `SEARCH_ITEM.ts`. (Like 'Time' and 'past', 'present', 'future') to array marked with comment  
 // ADD NEW FILTER TYPE
 
-3. Create data in `cards-data` folder in a new .ts file.
+3. Add those filter items in `filter-component.ts` to `getActiveFilterItem()` switch-case. 
 
-4. Import the new files in `card-service.service.ts` to places marked with comments  
+4. Create data in `cards-data` folder in a new .ts file.
+
+5. Import the new files in `card-service.service.ts` to places marked with comments  
 // ADD NEW CARD DATA HERE and //ADD NEW FILTER DATA HERE
 
-5. Add new kinds of search values to `filter.component.ts` to places marked with comment  
+6. Add new kinds of search values to `filter.component.ts` to places marked with comment  
 //ADD NEW KIND OF SEARCH VALUES HERE
 
-6. Add path to search values in `card-service.service.ts` to places marked with comment  
+7. Add path to search values in `card-service.service.ts` to places marked with comment  
 // ADD PATH TO SEARCH VALUES 
 
 
