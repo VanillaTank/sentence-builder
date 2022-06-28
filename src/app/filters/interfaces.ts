@@ -2,7 +2,6 @@ export interface SearchItem {
     title: string
     id: string
     values: SearchItemValues[]
-    
 }
 
 export interface SearchItemValues {
@@ -28,4 +27,10 @@ export interface ConditionSearchValues {
     mainClauseTime: string[]
     mainClauseSentenceType: string[]
     mainClausePronoun: string[]
+}
+
+export enum FilterListNames {
+  general = 'General',
+  conditional = 'Conditional'
+
 }

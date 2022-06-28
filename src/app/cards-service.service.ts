@@ -1,13 +1,21 @@
 import { Injectable } from '@angular/core';
-import { Card, ConditionCard } from './card';
+import { Card } from './card';
 import { PRESENT_SIMPLE } from './cards-data/PRESENT_SIMPLE';
 import { PAST_SIMPLE } from './cards-data/PAST_SIMPLE';
 import { PRESENT_CONTINUOUS } from './cards-data/PRESENT_CONTINIOUS';
 import { FUTURE_SIMPLE } from './cards-data/FUTURE_SIMPLE';
 import { PAST_CONTINUOUS } from './cards-data/PAST_CONTINUOUS'
 import { CONDITIONAL_CARDS } from './cards-data/CONDITION';
-import { GeneralSearchValues, ConditionSearchValues, SearchItem } from './filters/interfaces'
-import { GENERAL_SEARCH_ITEMS, CONDITION_SEARCH_ITEMS } from './filters-data/SEARCH_ITEMS'
+import { GeneralSearchValues, ConditionSearchValues, FilterListNames } from './filters/interfaces'
+import { BehaviorSubject } from "rxjs";
+import { scan } from 'rxjs/operators';
+
+
+interface MainFilter {
+  activeFilterName?: string;
+  activeCards?: Card[];
+  selectedCards?:  Card[] | [] ;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -19,58 +27,59 @@ export class CardsService {
     ...PRESENT_SIMPLE, ...PAST_SIMPLE, ...FUTURE_SIMPLE,
     ...PRESENT_CONTINUOUS, ...PAST_CONTINUOUS
   ];
-  CONDITIONAL_CARDS: ConditionCard[] = CONDITIONAL_CARDS;
+  CONDITIONAL_CARDS: Card[] = CONDITIONAL_CARDS;
 
-  activeCards: any[] = this.GENERAL_CARDS;
+  filterListNames = FilterListNames;
 
-  //@ts-ignore   //INITIAL VALUES
-  selectedCards: Card[] | [] = this.activeCards;
-  activeFilterName: string = "Generals";
+  initFilter: MainFilter = {
+    activeFilterName: FilterListNames.general,
+    activeCards: this.GENERAL_CARDS,
+    selectedCards: this.GENERAL_CARDS
+  }
+
+  filter = new BehaviorSubject<MainFilter>(this.initFilter);
+  savedFilterValue: any;
+  example: any = this.filter.pipe(
+    scan((acc, curr) => Object.assign({}, acc, curr), {})
+  ).subscribe((val: any) => this.savedFilterValue = val);
 
   constructor() {
   }
 
-  updateActiveFilter(choosenFilter: string): void {
-    this.activeFilterName = choosenFilter;
-    switch (this.activeFilterName) {
-      case 'Generals':
-        this.activeCards = this.GENERAL_CARDS;
+  getDefaultFilter() {
+    this.savedFilterValue.selectedCards = this.savedFilterValue.activeCards;
+    this.filter.next(this.savedFilterValue);
+  }
+
+  updateActiveFilter(chosenFilter: string): void {
+    switch (chosenFilter) {
+      case this.filterListNames.general:
+        this.filter.next({
+          activeFilterName: chosenFilter,
+          activeCards: this.GENERAL_CARDS,
+          selectedCards: this.GENERAL_CARDS
+        })
         break;
-      case 'Conditional':
-        this.activeCards = this.CONDITIONAL_CARDS;
+
+      case this.filterListNames.conditional:
+        this.filter.next({
+          activeFilterName: chosenFilter,
+          activeCards: this.CONDITIONAL_CARDS,
+          selectedCards: this.CONDITIONAL_CARDS
+        })
         break;
       //ADD NEW FILTER DATA HERE
       default:
-        this.activeCards = this.GENERAL_CARDS;
+        console.log('Был отправлен неверный chosenFilter в метод updateActiveFilter()');
+        break;
     }
-    this.actviveFilterItem().map(item => {
-      item.values.map(it => it.checked = false)
-    })
-    this.selectedCards = this.activeCards;
-  }
-
-  getAllCards(): void {
-    this.selectedCards = this.activeCards;
-  }
-
-  getActiveFilterName(): string {
-    return this.activeFilterName;
-  }
-
-  actviveFilterItem(): SearchItem[] {
-    switch (this.activeFilterName) {
-      case 'Generals':
-        return GENERAL_SEARCH_ITEMS;
-      case 'Conditional':
-        return CONDITION_SEARCH_ITEMS;
-      //TODO дописать сюда путь к элементам фильтра, когда будут данные
-      default:
-        return GENERAL_SEARCH_ITEMS;
-    }
+    this.example = this.filter.pipe(
+      scan((acc, curr) => Object.assign({}, acc, curr), {})
+    );
   }
 
   updateSelectedCards(query: GeneralSearchValues | ConditionSearchValues): void {
-    this.selectedCards = this.activeCards.filter(card => {
+    this.savedFilterValue.selectedCards = this.savedFilterValue.activeCards?.filter((card: Card) => {
       for (let q in query) {
         if (query[q].length > 0 && !query[q].includes(card.type[q])) {
           return false
@@ -78,6 +87,7 @@ export class CardsService {
       }
       return true;
     })
+    this.filter.next(this.savedFilterValue)
   }
 
 }

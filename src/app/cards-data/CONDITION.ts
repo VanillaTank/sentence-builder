@@ -1,6 +1,6 @@
-import { ConditionCard } from "../card"
+import { Card } from "../card"
 
-export const CONDITIONAL_CARDS: ConditionCard[] = [
+export const CONDITIONAL_CARDS: Card[] = [
     // TEST Active Future Simple regular statement
     {
         text: {

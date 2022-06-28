@@ -1,41 +1,41 @@
-<div class="card-container" *ngIf="cardsService.selectedCards.length > 0">
-    <ul class="card-list">
-        <li class="card"
-            *ngFor="let card of cardsService.selectedCards.slice(0, getMidOfArr(cardsService.selectedCards))">
-            <div class="card-header">
+<div class="card-container" *ngIf="selectedCards && selectedCards.length > 0">
+  <ul class="card-list">
+    <li class="card"
+        *ngFor="let card of selectedCards.slice(0, getMidOfArr(selectedCards))">
+      <div class="card-header">
                 <span class="card-title" *ngFor="let type of card.type | keyvalue:sortingTypeForTitle">
                     {{type.value[0] | uppercase}}{{type.value.slice(1)}}
                 </span>
-            </div>
-            <div class="card-theory" *ngIf="card.theory" (click)="card.isTheoryShow = !card.isTheoryShow">
-                <div *ngIf="card.scheme" class="card-theory-toggle">Theory</div>
-                <div *ngIf="card.isTheoryShow">
-                    {{card.theory}}
-                </div>
-            </div>
-            <div *ngIf="card.scheme" class="card-schema"> Scheme:<br>{{card.scheme}}</div>
-            <div *ngIf="card.text.en" class="card-text-en">{{card.text.en}}</div>
-            <div *ngIf="card.text.ru" class="card-text-ru">{{card.text.ru}}</div>
-        </li>
-    </ul>
+      </div>
+      <div class="card-theory" *ngIf="card.theory" (click)="card.isTheoryShow = !card.isTheoryShow">
+        <div *ngIf="card.scheme" class="card-theory-toggle">Theory</div>
+        <div *ngIf="card.isTheoryShow">
+          {{card.theory}}
+        </div>
+      </div>
+      <div *ngIf="card.scheme" class="card-schema"> Scheme:<br>{{card.scheme}}</div>
+      <div *ngIf="card.text.en" class="card-text-en">{{card.text.en}}</div>
+      <div *ngIf="card.text.ru" class="card-text-ru">{{card.text.ru}}</div>
+    </li>
+  </ul>
 
-    <ul class="card-list">
-        <li class="card"
-            *ngFor="let card of cardsService.selectedCards.slice(getMidOfArr(cardsService.selectedCards))">
-            <div class="card-header">
+  <ul class="card-list">
+    <li class="card"
+        *ngFor="let card of selectedCards.slice(getMidOfArr(selectedCards))">
+      <div class="card-header">
                 <span class="card-title" *ngFor="let type of card.type | keyvalue:sortingTypeForTitle">
                     {{type.value[0] | uppercase}}{{type.value.slice(1)}}
                 </span>
-            </div>
-            <div class="card-theory" *ngIf="card.theory" (click)="card.isTheoryShow = !card.isTheoryShow">
-                <div *ngIf="card.scheme" class="card-theory-toggle">Theory</div>
-                <div *ngIf="card.isTheoryShow">
-                    {{card.theory}}
-                </div>
-            </div>
-            <div *ngIf="card.scheme" class="card-schema"> Scheme:<br>{{card.scheme}}</div>
-            <div *ngIf="card.text.en" class="card-text-en">{{card.text.en}}</div>
-            <div *ngIf="card.text.ru" class="card-text-ru">{{card.text.ru}}</div>
-        </li>
-    </ul>
+      </div>
+      <div class="card-theory" *ngIf="card.theory" (click)="card.isTheoryShow = !card.isTheoryShow">
+        <div *ngIf="card.scheme" class="card-theory-toggle">Theory</div>
+        <div *ngIf="card.isTheoryShow">
+          {{card.theory}}
+        </div>
+      </div>
+      <div *ngIf="card.scheme" class="card-schema"> Scheme:<br>{{card.scheme}}</div>
+      <div *ngIf="card.text.en" class="card-text-en">{{card.text.en}}</div>
+      <div *ngIf="card.text.ru" class="card-text-ru">{{card.text.ru}}</div>
+    </li>
+  </ul>
 </div>

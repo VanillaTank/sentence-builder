@@ -1,14 +1,15 @@
 <div class="filter"
-  [class.general]="cardsService.getActiveFilterName() === 'Generals'" >
-  <h3 class="common-filter-title">{{cardsService.getActiveFilterName()}}</h3>
-  <button 
+  [class.general]="activeFilterName === 'Generals'"
+>
+  <h3 class="common-filter-title">{{activeFilterName}}</h3>
+  <button
     class="filter-clear-btn"
-    (click)="onClearBtnClick(cardsService.actviveFilterItem())"
+    (click)="onClearBtnClick(getActiveFilterItem(), activeFilterName )"
   >Clear</button>
 
   <div class="filter-inner">
 
-    <section class="filter-section" *ngFor="let item of cardsService.actviveFilterItem()">
+    <section class="filter-section" *ngFor="let item of getActiveFilterItem()">
       <h4 class="filter-title">{{item.title}}</h4>
       <div>
         <label *ngFor="let it of item.values">

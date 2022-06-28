@@ -1,16 +1,18 @@
-import { Component, Input, OnInit, SimpleChange } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 import { CardsService } from '../cards-service.service';
-import { SearchItem, ConditionSearchValues, GeneralSearchValues, SearchItemValues } from './interfaces';
+import { ConditionSearchValues, GeneralSearchValues, SearchItem, SearchItemValues, FilterListNames } from './interfaces';
+import { debounceTime, Subject, takeUntil } from 'rxjs';
+import { GENERAL_SEARCH_ITEMS, CONDITION_SEARCH_ITEMS } from '../filters-data/SEARCH_ITEMS'
 
 @Component({
   selector: 'app-filters',
   templateUrl: './filters.component.html',
-  styleUrls: ['./filters.component.css']
+  styleUrls: ['./filters.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
+export class FiltersComponent implements OnDestroy {
 
-export class FiltersComponent implements OnInit {
-  //@ts-ignore
-  @Input() activeFilterName: string;
+  private destroy$: Subject<void> = new Subject<void>();
 
   generalSearchValues: GeneralSearchValues = {
     voice: [],
@@ -20,7 +22,6 @@ export class FiltersComponent implements OnInit {
     verb: [],
     sentenceType: []
   };
-
   conditionSearchValues: ConditionSearchValues = {
     ifClauseTime: [],
     ifClauseSentenceType: [],
@@ -29,36 +30,62 @@ export class FiltersComponent implements OnInit {
     mainClauseSentenceType: [],
     mainClausePronoun: []
   };
-
   //ADD NEW KIND OF SEARCH VALUES HERE (like generalSearchValues)
 
   activeSearchValue: GeneralSearchValues | ConditionSearchValues = this.generalSearchValues;
+  filterListNames = FilterListNames;
 
-  constructor(public cardsService: CardsService) { }
+  //@ts-ignore
+  activeFilterName: string | undefined;
 
-  ngOnInit() {
+  constructor(public cardsService: CardsService,
+              public readonly cdr: ChangeDetectorRef) {
+    this.cardsService.filter
+      .pipe(
+        debounceTime(100),
+        takeUntil(this.destroy$)
+      )
+      .subscribe((v) => {
+        this.activeFilterName = v.activeFilterName;  //Определяем название фильтра
+        this.changeActiveSearchValue(v.activeFilterName);  //Определяем дефолтный вид поисковой строки
+        this.cdr.markForCheck();
+      });
   }
 
-  ngOnChanges(changes: SimpleChange):void {
-    //@ts-ignore
-    this.changeActiveSearchValue(changes.activeFilterName.currentValue)
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
-  changeActiveSearchValue(currentFilter: string):void {
+  changeActiveSearchValue(currentFilter: string | undefined): void {
     switch (currentFilter) {
-      case 'Generals': this.activeSearchValue = this.generalSearchValues; break;
-      case 'Conditional': this.activeSearchValue = this.conditionSearchValues; break;
+      case this.filterListNames.general:
+        this.activeSearchValue = this.generalSearchValues; break;
+      case this.filterListNames.conditional:
+        this.activeSearchValue = this.conditionSearchValues; break;
       default: break;
     }
   }
 
-  onClearBtnClick(actviveFilterItem: SearchItem[]): void {
-    actviveFilterItem.map(item => {
+  onClearBtnClick(activeFilterItem: SearchItem[], activeFilterName:string | undefined): void {
+    activeFilterItem.map(item => {
       item.values.map(it => it.checked = false)
     })
-    this.cardsService.getAllCards();
-    this.changeActiveSearchValue(this.cardsService.getActiveFilterName())
+    this.cardsService.getDefaultFilter();
+    this.changeActiveSearchValue(activeFilterName)
 
+  }
+
+  getActiveFilterItem(): SearchItem[] {
+    switch (this.activeFilterName) {
+      case this.filterListNames.general:
+        return GENERAL_SEARCH_ITEMS;
+      case this.filterListNames.conditional:
+        return CONDITION_SEARCH_ITEMS;
+      // ADD HERE PATH TO DATA FOR CREATING CHECKBOXES
+      default:
+        return GENERAL_SEARCH_ITEMS;
+    }
   }
 
   changeCheckbox(list: SearchItemValues[], title: string): void {
@@ -74,3 +101,4 @@ export class FiltersComponent implements OnInit {
     this.cardsService.updateSelectedCards(this.activeSearchValue);
   }
 }
+

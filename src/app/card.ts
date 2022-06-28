@@ -1,39 +1,31 @@
 export interface Card {
-    text: {
-        en: string
-        ru: string
-    }
-    theory?: string
-    scheme: string
-    type: CardType
-    isTheoryShow: boolean
+  text: {
+    en: string;
+    ru: string;
+  }
+  theory?: string;
+  scheme: string;
+  type: GeneralCardType | ConditionCardType;
+  isTheoryShow: boolean;
 }
 
-export interface CardType {
-    voice: string 
-    time: string
-    timeType: string
-    pronoun: string
-    verb: string
-    sentenceType: string
-}
+interface GeneralCardType {
+  [key: string]: any;
 
-export interface ConditionCard {
-    text: {
-        en: string
-        ru: string
-    }
-    theory?: string
-    scheme: string
-    type: ConditionCardType
-    isTheoryShow: boolean
+  voice: string
+  time: string
+  timeType: string
+  pronoun: string
+  verb: string
+  sentenceType: string
 }
 
 interface ConditionCardType {
-    ifClauseTime: string
-    ifClauseSentenceType: string
-    ifClausePronoun: string
-    mainClauseTime: string
-    mainClauseSentenceType: string
-    mainClausePronoun: string
+  [key: string]: any;
+  ifClauseTime: string
+  ifClauseSentenceType: string
+  ifClausePronoun: string
+  mainClauseTime: string
+  mainClauseSentenceType: string
+  mainClausePronoun: string
 }
