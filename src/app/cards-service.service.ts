@@ -12,9 +12,9 @@ import { scan } from 'rxjs/operators';
 
 
 interface MainFilter {
-  activeFilterName?: string;
-  activeCards?: Card[];
-  selectedCards?:  Card[] | [] ;
+  activeFilterName: string;
+  activeCards: Card[];
+  selectedCards:  Card[] | [] ;
 }
 
 @Injectable({

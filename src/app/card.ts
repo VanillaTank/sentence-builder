@@ -9,7 +9,7 @@ export interface Card {
   isTheoryShow: boolean;
 }
 
-interface GeneralCardType {
+export interface GeneralCardType {
   [key: string]: any;
 
   voice: string
@@ -20,7 +20,7 @@ interface GeneralCardType {
   sentenceType: string
 }
 
-interface ConditionCardType {
+export interface ConditionCardType {
   [key: string]: any;
   ifClauseTime: string
   ifClauseSentenceType: string

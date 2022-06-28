@@ -3,13 +3,15 @@
     <li class="card"
         *ngFor="let card of selectedCards.slice(0, getMidOfArr(selectedCards))">
       <div class="card-header">
-                <span class="card-title" *ngFor="let type of card.type | keyvalue:sortingTypeForTitle">
-                    {{type.value[0] | uppercase}}{{type.value.slice(1)}}
-                </span>
+        {{getCardHeader(card.type)}}
       </div>
-      <div class="card-theory" *ngIf="card.theory" (click)="card.isTheoryShow = !card.isTheoryShow">
-        <div *ngIf="card.scheme" class="card-theory-toggle">Theory</div>
-        <div *ngIf="card.isTheoryShow">
+      <div class="card-theory" *ngIf="card.theory">
+        <div
+          *ngIf="card.scheme"
+          (click)="card.isTheoryShow = !card.isTheoryShow"
+          class="card-theory-toggle"
+        >Theory</div>
+        <div *ngIf="card.isTheoryShow" class="card-theory-body">
           {{card.theory}}
         </div>
       </div>
@@ -23,13 +25,15 @@
     <li class="card"
         *ngFor="let card of selectedCards.slice(getMidOfArr(selectedCards))">
       <div class="card-header">
-                <span class="card-title" *ngFor="let type of card.type | keyvalue:sortingTypeForTitle">
-                    {{type.value[0] | uppercase}}{{type.value.slice(1)}}
-                </span>
+        {{getCardHeader(card.type)}}
       </div>
-      <div class="card-theory" *ngIf="card.theory" (click)="card.isTheoryShow = !card.isTheoryShow">
-        <div *ngIf="card.scheme" class="card-theory-toggle">Theory</div>
-        <div *ngIf="card.isTheoryShow">
+      <div class="card-theory" *ngIf="card.theory">
+        <div
+          *ngIf="card.scheme"
+          (click)="card.isTheoryShow = !card.isTheoryShow"
+          class="card-theory-toggle"
+        >Theory</div>
+        <div *ngIf="card.isTheoryShow" class="card-theory-body">
           {{card.theory}}
         </div>
       </div>
