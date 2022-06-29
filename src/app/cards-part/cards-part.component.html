@@ -1,4 +1,4 @@
-<div class="card-container" *ngIf="selectedCards && selectedCards.length > 0">
+<div class="card-container" *ngIf="selectedCards && selectedCards.length > 0; else noCards">
   <ul class="card-list">
     <li class="card"
         *ngFor="let card of selectedCards.slice(0, getMidOfArr(selectedCards))">
@@ -43,3 +43,6 @@
     </li>
   </ul>
 </div>
+<ng-template #noCards>
+  Sorry, no cards found.
+</ng-template>

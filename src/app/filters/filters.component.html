@@ -14,7 +14,7 @@
       <div>
         <label *ngFor="let it of item.values">
           <input type="checkbox" [(ngModel)]="it.checked" (change)="changeCheckbox(item.values, item.id)">
-          {{ it.value}}
+          <span>{{ it.value}}</span>
         </label>
       </div>
     </section>

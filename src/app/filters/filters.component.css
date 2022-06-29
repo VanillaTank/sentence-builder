@@ -1,56 +1,107 @@
 .filter {
-    border: 1px solid #B9B9B9;
-    background-color: #fff;
-    border-radius: 4px;
-    padding: 10px 20px 15px;
-    width: 100%;
-    position: relative;
+  border: 1px solid #FAC213;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px 20px 15px;
+  width: 100%;
+  position: relative;
+  min-height: 210px;
 }
 
 .filter-clear-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    background-color: #e4e4e4;
-    cursor: pointer;
-    box-shadow: none;
-    border: none;
-    outline: none;
-    border-radius: 2px;
-    display: inline-block;
-    padding: 0 6px;
-    transition: .2s;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #F77E21;
+  opacity: .85;
+  transition: .2s;
+  color: #FFFDE1;
+  font-size: 14px;
 }
+
 .filter-clear-btn:hover {
-    background-color: #cacaca;
+  opacity: 1;
 }
+
+.filter-clear-btn:active {
+  background-color: #D61C4E;
+}
+
 .common-filter-title {
-    color: #777B75;
-    margin-bottom: 6px;
+  min-height: 25px;
+  color: #8b827a;
+  margin-bottom: 6px;
+  font-size: 14px;
 }
+
 .filter-section {
   width: 100%;
 }
-.filter-section+.filter-section{
-    margin-left: 30px;
+
+.filter-section + .filter-section {
+  margin-left: 30px;
 }
+
 .filter-title {
-   font-weight: 700;
-   margin-bottom: 4px;
+  font-weight: 700;
+  margin-bottom: 4px;
 }
 
 .filter-inner {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 label {
-    user-select: none;
-    display: block;
-    cursor: pointer;
+  user-select: none;
+  cursor: pointer;
+  line-height: 22px;
+  display: block;
 }
 
 input[type=checkbox] {
-    display: inline-block;
-    margin-right: 4px;
+  display: inline-block;
+  margin-right: 4px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input[type=checkbox]::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 2px solid #F77E21;
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  background-color: #D61C4E;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+  cursor: pointer;
 }

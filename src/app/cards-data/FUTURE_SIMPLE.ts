@@ -440,7 +440,7 @@ export const FUTURE_SIMPLE: Card[] = [
     {
         text: {
             en: 'I will not do it tomorrow.',
-            ru: 'Я буду делать этого завтра.'
+            ru: 'Я не буду делать этого завтра.'
         },
         theory: 'Действие будет совершаться в будущем.',
         scheme: 'I + will not + do',
