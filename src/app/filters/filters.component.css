@@ -45,7 +45,7 @@
   width: 100%;
 }
 
-.filter-section + .filter-section {
+.filter-section+.filter-section {
   margin-left: 30px;
 }
 
@@ -104,4 +104,37 @@ input[type=checkbox]:checked::after {
   transform: translate(-50%, -50%);
   visibility: visible;
   cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .ext-filter-wraper {
+    max-width: 100%;
+    width: 100%;
+    overflow: auto;
+    scrollbar-color: #fc8326, #f3efd4;
+    scrollbar-width: thin;
+  }
+
+  .filter {
+    min-width: 1000px;
+  }
+
+
+  .ext-filter-wraper::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+  }
+
+  .ext-filter-wraper::-webkit-scrollbar-track {
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #f3efd4;
+    border-radius: 12px;
+  }
+
+  .ext-filter-wraper::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background: linear-gradient(180deg, #f59449, #df3663);
+  }
+
 }

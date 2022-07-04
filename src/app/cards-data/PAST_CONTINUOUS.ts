@@ -189,7 +189,7 @@ export const PAST_CONTINUOUS: Card[] = [
       time: 'past',
       timeType: 'continuous',
       pronoun: 'I',
-      verb: 'regular',
+      verb: 'irregular',
       sentenceType: 'statement',
     }
   },
@@ -206,7 +206,7 @@ export const PAST_CONTINUOUS: Card[] = [
       time: 'past',
       timeType: 'continuous',
       pronoun: 'we',
-      verb: 'regular',
+      verb: 'irregular',
       sentenceType: 'statement',
     }
   },
@@ -223,7 +223,7 @@ export const PAST_CONTINUOUS: Card[] = [
       time: 'past',
       timeType: 'continuous',
       pronoun: 'you',
-      verb: 'regular',
+      verb: 'irregular',
       sentenceType: 'statement',
     }
   },
@@ -240,7 +240,7 @@ export const PAST_CONTINUOUS: Card[] = [
       time: 'past',
       timeType: 'continuous',
       pronoun: 'he, she, it',
-      verb: 'regular',
+      verb: 'irregular',
       sentenceType: 'statement',
     }
   },
@@ -257,7 +257,7 @@ export const PAST_CONTINUOUS: Card[] = [
       time: 'past',
       timeType: 'continuous',
       pronoun: 'they',
-      verb: 'regular',
+      verb: 'irregular',
       sentenceType: 'statement',
     }
   },
@@ -276,7 +276,7 @@ export const PAST_CONTINUOUS: Card[] = [
       time: 'past',
       timeType: 'continuous',
       pronoun: 'I',
-      verb: 'regular',
+      verb: 'irregular',
       sentenceType: 'negation',
     }
   },
@@ -293,7 +293,7 @@ export const PAST_CONTINUOUS: Card[] = [
       time: 'past',
       timeType: 'continuous',
       pronoun: 'we',
-      verb: 'regular',
+      verb: 'irregular',
       sentenceType: 'negation',
     }
   },
@@ -310,7 +310,7 @@ export const PAST_CONTINUOUS: Card[] = [
       time: 'past',
       timeType: 'continuous',
       pronoun: 'you',
-      verb: 'regular',
+      verb: 'irregular',
       sentenceType: 'negation',
     }
   },
@@ -327,7 +327,7 @@ export const PAST_CONTINUOUS: Card[] = [
       time: 'past',
       timeType: 'continuous',
       pronoun: 'he, she, it',
-      verb: 'regular',
+      verb: 'irregular',
       sentenceType: 'negation',
     }
   },
@@ -344,7 +344,7 @@ export const PAST_CONTINUOUS: Card[] = [
       time: 'past',
       timeType: 'continuous',
       pronoun: 'they',
-      verb: 'regular',
+      verb: 'irregular',
       sentenceType: 'negation',
     }
   },

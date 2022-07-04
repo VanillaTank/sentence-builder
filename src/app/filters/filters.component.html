@@ -1,23 +1,20 @@
-<div class="filter"
-  [class.general]="activeFilterName === 'Generals'"
->
-  <h3 class="common-filter-title">{{activeFilterName}}</h3>
-  <button
-    class="filter-clear-btn"
-    (click)="onClearBtnClick(getActiveFilterItem(), activeFilterName )"
-  >Clear</button>
+<div class="ext-filter-wraper">
+  <div class="filter" [class.general]="activeFilterName === 'Generals'">
+    <h3 class="common-filter-title">{{activeFilterName}}</h3>
+    <button class="filter-clear-btn" (click)="onClearBtnClick(getActiveFilterItem(), activeFilterName )">Clear</button>
 
-  <div class="filter-inner">
+    <div class="filter-inner">
 
-    <section class="filter-section" *ngFor="let item of getActiveFilterItem()">
-      <h4 class="filter-title">{{item.title}}</h4>
-      <div>
-        <label *ngFor="let it of item.values">
-          <input type="checkbox" [(ngModel)]="it.checked" (change)="changeCheckbox(item.values, item.id)">
-          <span>{{ it.value}}</span>
-        </label>
-      </div>
-    </section>
+      <section class="filter-section" *ngFor="let item of getActiveFilterItem()">
+        <h4 class="filter-title">{{item.title}}</h4>
+        <div>
+          <label *ngFor="let it of item.values">
+            <input type="checkbox" [(ngModel)]="it.checked" (change)="changeCheckbox(item.values, item.id)">
+            <span>{{ it.value}}</span>
+          </label>
+        </div>
+      </section>
+    </div>
+
   </div>
-
 </div>

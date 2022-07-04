@@ -57,6 +57,10 @@ export class FiltersComponent implements OnDestroy {
     this.destroy$.complete();
   }
 
+  ngOnInit() {
+    this.cardsService.clearStorage();
+  }
+
   changeActiveSearchValue(currentFilter: string | undefined): void {
     switch (currentFilter) {
       case this.filterListNames.general:

@@ -13,7 +13,7 @@ export class CardsPartComponent implements OnDestroy {
   private destroy$: Subject<void> = new Subject<void>();
 
   //@ts-ignore
-  selectedCards: Card[] | [] | undefined;
+  selectedCards: Card[] | [] | undefined | void;
   activeFilterName: string = FilterListNames.general;
 
   constructor(private cardsService: CardsService,

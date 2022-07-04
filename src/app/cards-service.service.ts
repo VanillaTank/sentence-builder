@@ -9,12 +9,13 @@ import { CONDITIONAL_CARDS } from './cards-data/CONDITION';
 import { GeneralSearchValues, ConditionSearchValues, FilterListNames } from './filters/interfaces'
 import { BehaviorSubject } from "rxjs";
 import { scan } from 'rxjs/operators';
+import {CONDITION_SEARCH_ITEMS, GENERAL_SEARCH_ITEMS} from './filters-data/SEARCH_ITEMS'
 
 
 interface MainFilter {
   activeFilterName: string;
   activeCards: Card[];
-  selectedCards:  Card[] | [] ;
+  selectedCards: Card[] | [] | void;
 }
 
 @Injectable({
@@ -36,7 +37,8 @@ export class CardsService {
     activeCards: this.GENERAL_CARDS,
     selectedCards: this.GENERAL_CARDS
   }
-
+  query: GeneralSearchValues | ConditionSearchValues | undefined;
+  prevFilter: string = FilterListNames.general;
   filter = new BehaviorSubject<MainFilter>(this.initFilter);
   savedFilterValue: any;
   example: any = this.filter.pipe(
@@ -52,6 +54,13 @@ export class CardsService {
   }
 
   updateActiveFilter(chosenFilter: string): void {
+console.log(chosenFilter);
+
+    if (this.query) {
+      this.saveToLocalStorage(this.prevFilter, this.query);
+      this.query = undefined;
+    }
+
     switch (chosenFilter) {
       case this.filterListNames.general:
         this.filter.next({
@@ -59,7 +68,9 @@ export class CardsService {
           activeCards: this.GENERAL_CARDS,
           selectedCards: this.GENERAL_CARDS
         })
+        this.prevFilter = this.filterListNames.general;
         break;
+
 
       case this.filterListNames.conditional:
         this.filter.next({
@@ -67,18 +78,57 @@ export class CardsService {
           activeCards: this.CONDITIONAL_CARDS,
           selectedCards: this.CONDITIONAL_CARDS
         })
+        this.prevFilter = this.filterListNames.conditional;
         break;
       //ADD NEW FILTER DATA HERE
+
+
       default:
         console.log('Был отправлен неверный chosenFilter в метод updateActiveFilter()');
         break;
     }
+
     this.example = this.filter.pipe(
       scan((acc, curr) => Object.assign({}, acc, curr), {})
     );
+
+    if (this.getLocalStorage(chosenFilter)) {
+      //@ts-ignore
+      this.updateSelectedCards(JSON.parse(this.getLocalStorage(chosenFilter)))
+    } else {
+      let actviveFilterItem; 
+      if(chosenFilter === this.filterListNames.general) {
+        actviveFilterItem = GENERAL_SEARCH_ITEMS;
+      }
+
+      if(chosenFilter === this.filterListNames.conditional) {
+        actviveFilterItem = CONDITION_SEARCH_ITEMS;
+      }
+
+      actviveFilterItem?.map(item => {
+        item.values.map(it => it.checked = false)
+      })
+    }
+  }
+
+  getLocalStorage(filterType: string): boolean | string | null {
+    if (!localStorage.getItem(`sentense-builder: ${filterType}`)) { return false }
+    return localStorage.getItem(`sentense-builder: ${filterType}`)
+  }
+
+  saveToLocalStorage(filterType: string, data: any): void {
+    localStorage.setItem(`sentense-builder: ${filterType}`, JSON.stringify(data));
+  }
+
+  clearStorage():void {
+    for(let f in this.filterListNames) {
+      // @ts-ignorets
+      localStorage.removeItem(`sentense-builder: ${this.filterListNames[f]}`);
+    }
   }
 
   updateSelectedCards(query: GeneralSearchValues | ConditionSearchValues): void {
+    this.query = query;
     this.savedFilterValue.selectedCards = this.savedFilterValue.activeCards?.filter((card: Card) => {
       for (let q in query) {
         if (query[q].length > 0 && !query[q].includes(card.type[q])) {
@@ -89,5 +139,6 @@ export class CardsService {
     })
     this.filter.next(this.savedFilterValue)
   }
+
 
 }
