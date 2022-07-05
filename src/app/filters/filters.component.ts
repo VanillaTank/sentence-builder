@@ -61,13 +61,21 @@ export class FiltersComponent implements OnDestroy {
     this.cardsService.clearStorage();
   }
 
-  changeActiveSearchValue(currentFilter: string | undefined): void {
+  changeActiveSearchValue(currentFilter: string | undefined): void { 
     switch (currentFilter) {
       case this.filterListNames.general:
-        this.activeSearchValue = this.generalSearchValues; break;
+        this.activeSearchValue = this.generalSearchValues;         
+        break;
       case this.filterListNames.conditional:
-        this.activeSearchValue = this.conditionSearchValues; break;
+        this.activeSearchValue = this.conditionSearchValues; 
+        break;
       default: break;
+    }
+  }
+
+  clearActiveSearchValues() {
+    for(let item in this.activeSearchValue) {
+      this.activeSearchValue[item] = [];
     }
   }
 
@@ -76,8 +84,8 @@ export class FiltersComponent implements OnDestroy {
       item.values.map(it => it.checked = false)
     })
     this.cardsService.getDefaultFilter();
-    this.changeActiveSearchValue(activeFilterName)
-
+    this.clearActiveSearchValues();
+    this.cardsService.clearStorage(activeFilterName);
   }
 
   getActiveFilterItem(): SearchItem[] {

@@ -4,7 +4,8 @@ import { PRESENT_SIMPLE } from './cards-data/PRESENT_SIMPLE';
 import { PAST_SIMPLE } from './cards-data/PAST_SIMPLE';
 import { PRESENT_CONTINUOUS } from './cards-data/PRESENT_CONTINIOUS';
 import { FUTURE_SIMPLE } from './cards-data/FUTURE_SIMPLE';
-import { PAST_CONTINUOUS } from './cards-data/PAST_CONTINUOUS'
+import { PAST_CONTINUOUS } from './cards-data/PAST_CONTINUOUS';
+import {PRESENT_PERFECT} from './cards-data/PRESENT_PERFECT'
 import { CONDITIONAL_CARDS } from './cards-data/CONDITION';
 import { GeneralSearchValues, ConditionSearchValues, FilterListNames } from './filters/interfaces'
 import { BehaviorSubject } from "rxjs";
@@ -26,7 +27,8 @@ export class CardsService {
   // ADD NEW CARD DATA HERE
   GENERAL_CARDS: Card[] = [
     ...PRESENT_SIMPLE, ...PAST_SIMPLE, ...FUTURE_SIMPLE,
-    ...PRESENT_CONTINUOUS, ...PAST_CONTINUOUS
+    ...PRESENT_CONTINUOUS, ...PAST_CONTINUOUS,
+    ...PRESENT_PERFECT
   ];
   CONDITIONAL_CARDS: Card[] = CONDITIONAL_CARDS;
 
@@ -54,7 +56,6 @@ export class CardsService {
   }
 
   updateActiveFilter(chosenFilter: string): void {
-console.log(chosenFilter);
 
     if (this.query) {
       this.saveToLocalStorage(this.prevFilter, this.query);
@@ -99,9 +100,7 @@ console.log(chosenFilter);
       let actviveFilterItem; 
       if(chosenFilter === this.filterListNames.general) {
         actviveFilterItem = GENERAL_SEARCH_ITEMS;
-      }
-
-      if(chosenFilter === this.filterListNames.conditional) {
+      } else if(chosenFilter === this.filterListNames.conditional) {
         actviveFilterItem = CONDITION_SEARCH_ITEMS;
       }
 
@@ -112,23 +111,31 @@ console.log(chosenFilter);
   }
 
   getLocalStorage(filterType: string): boolean | string | null {
-    if (!localStorage.getItem(`sentense-builder: ${filterType}`)) { return false }
-    return localStorage.getItem(`sentense-builder: ${filterType}`)
+    if (!localStorage.getItem(`sentence-builder: ${filterType}`)) { return false }
+    return localStorage.getItem(`sentence-builder: ${filterType}`)
   }
 
   saveToLocalStorage(filterType: string, data: any): void {
-    localStorage.setItem(`sentense-builder: ${filterType}`, JSON.stringify(data));
+    localStorage.setItem(`sentence-builder: ${filterType}`, JSON.stringify(data));
   }
 
-  clearStorage():void {
+  clearStorage(activeFilterName:string | undefined = undefined):void {
+    this.query = undefined;
+    if(activeFilterName) {
+      console.log(activeFilterName);
+      
+      localStorage.removeItem(`sentence-builder: ${activeFilterName}`);
+      return;
+    }
+
     for(let f in this.filterListNames) {
       // @ts-ignorets
-      localStorage.removeItem(`sentense-builder: ${this.filterListNames[f]}`);
+      localStorage.removeItem(`sentence-builder: ${this.filterListNames[f]}`);
     }
   }
 
   updateSelectedCards(query: GeneralSearchValues | ConditionSearchValues): void {
-    this.query = query;
+    this.query = query; 
     this.savedFilterValue.selectedCards = this.savedFilterValue.activeCards?.filter((card: Card) => {
       for (let q in query) {
         if (query[q].length > 0 && !query[q].includes(card.type[q])) {
