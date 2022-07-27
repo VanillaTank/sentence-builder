@@ -11,7 +11,7 @@ import { GeneralSearchValues, ConditionSearchValues, FilterListNames } from './f
 import { BehaviorSubject } from "rxjs";
 import { scan } from 'rxjs/operators';
 import {CONDITION_SEARCH_ITEMS, GENERAL_SEARCH_ITEMS} from './filters-data/SEARCH_ITEMS'
-
+import {PAST_PERFECT} from './cards-data/PAST_PERFECT'
 
 interface MainFilter {
   activeFilterName: string;
@@ -28,7 +28,7 @@ export class CardsService {
   GENERAL_CARDS: Card[] = [
     ...PRESENT_SIMPLE, ...PAST_SIMPLE, ...FUTURE_SIMPLE,
     ...PRESENT_CONTINUOUS, ...PAST_CONTINUOUS,
-    ...PRESENT_PERFECT
+    ...PRESENT_PERFECT, ...PAST_PERFECT
   ];
   CONDITIONAL_CARDS: Card[] = CONDITIONAL_CARDS;
 
