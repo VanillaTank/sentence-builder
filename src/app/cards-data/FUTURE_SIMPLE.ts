@@ -109,7 +109,7 @@ export const FUTURE_SIMPLE: Card[] = [
     {
         text: {
             en: 'We will not work tomorrow.',
-            ru: 'Мы не работали вчера.'
+            ru: 'Мы не будем работать завтра.'
         },
         theory: 'Действие будет совершаться в будущем.',
         scheme: 'We + will not + V1',
@@ -179,7 +179,7 @@ export const FUTURE_SIMPLE: Card[] = [
     {
         text: {
             en: 'I will go tomorrow.',
-            ru: 'Я ходил вчера.'
+            ru: 'Я пойду завтра.'
         },
         theory: 'Действие будет совершаться в будущем.',
         scheme: 'I + will + V1',
@@ -300,7 +300,7 @@ export const FUTURE_SIMPLE: Card[] = [
     {
         text: {
             en: 'You will not go tomorrow.',
-            ru: 'Ты не пойдешь завтра(ед.ч.) ИЛИ Вы пойдете завтра(мн.ч.)'
+            ru: 'Ты не пойдешь завтра(ед.ч.) ИЛИ Вы не пойдете завтра(мн.ч.)'
         },
         theory: 'Действие будет совершаться в будущем.',
         scheme: 'You + will not + V1',

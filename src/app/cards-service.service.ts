@@ -12,6 +12,7 @@ import { BehaviorSubject } from "rxjs";
 import { scan } from 'rxjs/operators';
 import {CONDITION_SEARCH_ITEMS, GENERAL_SEARCH_ITEMS} from './filters-data/SEARCH_ITEMS'
 import {PAST_PERFECT} from './cards-data/PAST_PERFECT'
+import {FUTURE_CONTINUOUS} from './cards-data/FUTURE_CONTINUOUS'
 
 interface MainFilter {
   activeFilterName: string;
@@ -27,7 +28,7 @@ export class CardsService {
   // ADD NEW CARD DATA HERE
   GENERAL_CARDS: Card[] = [
     ...PRESENT_SIMPLE, ...PAST_SIMPLE, ...FUTURE_SIMPLE,
-    ...PRESENT_CONTINUOUS, ...PAST_CONTINUOUS,
+    ...PRESENT_CONTINUOUS, ...PAST_CONTINUOUS, ...FUTURE_CONTINUOUS,
     ...PRESENT_PERFECT, ...PAST_PERFECT
   ];
   CONDITIONAL_CARDS: Card[] = CONDITIONAL_CARDS;

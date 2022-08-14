@@ -24,7 +24,7 @@ To use it, go to [here](https://vanillatank.github.io/sentence-builder/).
 // ADD PATH TO SEARCH VALUES 
 
 8. Add conditions for creating card headers in `card-part.component.ts` to `getCardHeader()` to places marked with comment  
-   // ADD CONDITIONS FOR CREATING CARD HEADERS HERE
+// ADD CONDITIONS FOR CREATING CARD HEADERS HERE
 
 
 
