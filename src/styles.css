@@ -4,20 +4,79 @@
     padding: 0;
     font-size: 16px;
     font-weight: normal;
-    color: #382808;
+    color: #342229;
     font-family: 'Noto Serif', serif;
 }
 
 body {
-    background-color: #FFFDE1;
+    background-color: #D5C1CC;
+    position: relative;
+    z-index: 1;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.bg {
+    background-color: #D5C1CC;
+    background-image: url('./bgk.jpg');
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
 
 ul {
     list-style: none;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 1220px;
-    padding: 0 10px;
+button {
+    border: none;
+    outline: none;
+}
+
+.flex {
+    display: flex;
+    gap: 0 20px;
+}
+
+.justifyBetween {
+    justify-content: space-between;
+}
+.nav_side {
+    max-width: 350px;
+    width: 100%;
+    margin-right: 50px;
+}
+.htu_btn {
+    background-color: #fff;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    font-size: 19px;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    box-shadow: -2px -2px 10px #7C6C6D;
+    box-shadow: 2px 4px 10px #7C6C6D;
+    transition: 0.2s;
+    margin-bottom: 20px;
+}
+
+.htu_btn:hover {
+    background-color: #EBF1E0;
+}
+
+.htu_btn:active {
+    background-color: #C8D2B5;
+}
+
+.htu_btn:active:focus {
+    background-color: #C8D2B5;
 }

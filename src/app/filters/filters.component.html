@@ -1,0 +1,30 @@
+<div class="nav">
+    <div *ngFor="let filter of Filters" class="filter_wrap">
+        <h4 class="title">{{filter.title}}</h4>
+
+        <ul *ngIf="filter.type === 'btn-filter'" class="btn_filter flex">
+            <li *ngFor="let c of filter.content">
+                <button [class.active]="c.state" class="btn" (click)="onClickBtnFilter(c)">{{c.title}}</button>
+            </li>
+        </ul>
+
+        <ul *ngIf="filter.type === 'list-filter'" class="list_filter">
+            <li *ngFor="let c of filter.content" class="filter">
+                <div 
+                    class="title_row"
+                    (click)="onTitleRowClick(c)"
+                >
+                    <h4>{{c.title}}</h4>
+                </div>
+                <ul class="content" [class.show]="c.shown">
+                    <li 
+                    *ngFor="let v of c.values" 
+                    (click)="v.checked = !v.checked"
+                    class="value"
+                    ><span [class.checked]="v.checked">{{v.title}}</span></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</div>

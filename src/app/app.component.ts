@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CardsService } from './cards-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +6,8 @@ import { CardsService } from './cards-service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'some-project';
- 
+  title = 'English';
+  showHTU() {
+    alert('In progress...')
+}
 }
