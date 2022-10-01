@@ -1,5 +1,7 @@
 <div class="nav">
-    <div *ngFor="let filter of Filters" class="filter_wrap">
+    <div *ngFor="let filter of Filters" class="filter_wrap" 
+        [ngClass]="{orange: filter.id === 'cardFilter', violet: filter.id === 'exampleFilter'}"
+        >
         <h4 class="title">{{filter.title}}</h4>
 
         <ul *ngIf="filter.type === 'btn-filter'" class="btn_filter flex">

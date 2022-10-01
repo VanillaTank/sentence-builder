@@ -56,7 +56,7 @@ export class FiltersComponent {
             id: 'exampleFilter',
             type: 'list-filter',
             content: [{
-                title: 'Pronoun',
+                title: 'PRONOUN',
                 id: 'pronoun',
                 shown: false,
                 values: [{ title: 'I', checked: false },
@@ -68,7 +68,7 @@ export class FiltersComponent {
                 state: false
             },
             {
-                title: 'Verb',
+                title: 'VERB',
                 id: 'verb',
                 shown: false,
                 values: [{ title: 'regular', checked: false },

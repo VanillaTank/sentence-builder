@@ -2,4 +2,6 @@
     margin: 20px auto;
     max-width: 1060px;
     padding: 0 10px;
+    position: relative;
+    z-index: 1;
 }

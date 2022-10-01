@@ -1,0 +1,52 @@
+.card {
+    background-color: #fff;
+    padding: 17px 27px;
+    border-radius: 8px;
+    box-shadow: -2px -2px 10px #7C6C6D;
+    box-shadow: 2px 4px 10px #7C6C6D;
+}
+
+.card+.card {
+    margin-top: 35px;
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+}
+
+.sub-title {
+    margin-top: 28px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.schema {
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #EBF1E0;
+}
+
+.schema+.schema {
+    margin-top: 10px;
+}
+
+.tip {
+    color: #998F8F;
+    font-size: 14px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.example+.example {
+    margin-top: 8px;
+}
+
+.en {
+    font-size: 17px;
+}
+
+.ru {
+    font-size: 15px;
+    color: #6F676A;
+}
