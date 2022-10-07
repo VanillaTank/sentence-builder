@@ -1,4 +1,4 @@
-import { Card } from "../card"
+import { Card } from "../../cardInterfaces"
 
 export const FUTURE_CONTINUOUS: Card[] = [
     // Active Future continuous regular statement

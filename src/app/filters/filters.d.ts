@@ -3,8 +3,12 @@ export interface Filter {
     id: string;
     type: 'list-filter' | 'btn-filter';
     content: {
+        id?: string;
+        shown?: boolean;
         title: string;
-        value: string;
-        state: boolean;
+        value?: string;
+        values?: { title: string, checked: boolean }[];
+        selectedValue?: string;
+        state?: boolean;
     }[]
 }

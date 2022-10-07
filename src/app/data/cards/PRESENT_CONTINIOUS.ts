@@ -1,41 +1,48 @@
-import { Card } from "../card"
+import { Card } from "../../cardInterfaces"
 
-export const PRESENT_CONTINUOUS: Card[] = [
-    // Active Present Continuous regular statement
-    {
-        text: {
+export const PRESENT_CONTINUOUS: Card = {
+    title: "ACTIVE PRESENT CONTINUOUS",
+    mainFilter: 'general',
+    cardFilter: [
+        { title: 'time', value: 'present' },
+        { title: 'timeType', value: 'continuous' },
+        { title: 'voice', value: 'active' },
+    ],
+    theory: 'Настоящее длительное',
+    schemas: ['Subject + am/is/are + Ving', 'Subject + am/is/are + not + Ving', 'Am/Is/Are + subject + Ving ?'],
+    examples: [
+        {
             en: 'I am working now.',
-            ru: 'Я работаю сейчас.'
+            ru: 'Я работаю сейчас.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'I' },
+                { title: 'verb', value: 'regular' },
+                { title: 'sentenceType', value: 'statement' },
+            ]
         },
-        theory: 'Для действия в процессе, действие совершается в тот момент, когда о нем говорят.',
-        scheme: 'I + am + V1+ing',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'present',
-            timeType: 'continuous',
-            pronoun: 'I',
-            verb: 'regular',
-            sentenceType: 'statement',
-        }
-    },
-    {
-        text: {
+        {
             en: 'We are working now.',
-            ru: 'Мы работаем (сейчас).'
+            ru: 'Мы работаем (сейчас).',
+            exampleFilter: [
+                { title: 'pronoun', value: 'we' },
+                { title: 'verb', value: 'regular' },
+                { title: 'sentenceType', value: 'statement' },
+            ]
         },
-        theory: 'Для действия в процессе, действие совершается в тот момент, когда о нем говорят.',
-        scheme: 'We + are + V1+ing',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'present',
-            timeType: 'continuous',
-            pronoun: 'we',
-            verb: 'regular',
-            sentenceType: 'statement',
+        {
+            en: 'You are working now.',
+            ru: 'Ты работаешь сейчас. ИЛИ Вы работаете сейчас(во мн.ч.) ',
+            exampleFilter: [
+                { title: 'pronoun', value: 'you' },
+                { title: 'verb', value: 'regular' },
+                { title: 'sentenceType', value: 'statement' },
+            ]
         }
-    },
+    ]
+}
+
+export const PRESENT_CONTINUOUS_ = [
+
     {
         text: {
             en: 'You are working now.',

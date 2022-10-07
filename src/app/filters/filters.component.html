@@ -6,7 +6,7 @@
 
         <ul *ngIf="filter.type === 'btn-filter'" class="btn_filter flex">
             <li *ngFor="let c of filter.content">
-                <button [class.active]="c.state" class="btn" (click)="onClickBtnFilter(c)">{{c.title}}</button>
+                <button [class.active]="c.state" class="btn" (click)="onClickBtnFilter(c, filter.id)">{{c.title}}</button>
             </li>
         </ul>
 
@@ -21,7 +21,7 @@
                 <ul class="content" [class.show]="c.shown">
                     <li 
                     *ngFor="let v of c.values" 
-                    (click)="v.checked = !v.checked"
+                    (click)="onClickBtnFilter(c, filter.id, v)"
                     class="value"
                     ><span [class.checked]="v.checked">{{v.title}}</span></li>
                 </ul>

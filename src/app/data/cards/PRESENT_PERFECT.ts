@@ -1,4 +1,4 @@
-import { Card } from "../card"
+import { Card } from "../../cardInterfaces"
 
 export const PRESENT_PERFECT: Card[] = [
     // Active Present perfect irregular statement

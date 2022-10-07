@@ -1,6 +1,6 @@
-import { Card } from "../card"
+import { Card } from "../../cardInterfaces"
 
-export const PRESENT_SIMPLE: Card[] = [
+export const PRESENT_SIMPLE = [
     // Active Present Simple regular statement
     {
         text: {

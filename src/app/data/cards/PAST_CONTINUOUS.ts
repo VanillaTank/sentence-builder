@@ -1,4 +1,4 @@
-import { Card } from "../card"
+import { Card } from "../../cardInterfaces"
 
 export const PAST_CONTINUOUS: Card[] = [
   // Active Past continuous regular statement

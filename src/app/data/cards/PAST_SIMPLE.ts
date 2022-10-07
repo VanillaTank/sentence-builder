@@ -1,354 +1,203 @@
-import { Card } from "../card"
+import { Card } from "../../cardInterfaces"
 
-export const PAST_SIMPLE: Card[] = [
-    // Active Past Simple regular statement
-    {
-        text: {
+export const PAST_SIMPLE: Card = {
+    title: "ACTIVE PAST SIMPLE",
+    mainFilter: 'general',
+    cardFilter: [
+        { title: 'time', value: 'past' },
+        { title: 'timeType', value: 'simple' },
+        { title: 'voice', value: 'active' },
+    ],
+    theory: 'Для фактов и обычных повседневных дел.',
+    schemas: ['Subject + V1+ed/V2', 'Subject + did not + V1', 'Did + subject + V1 ?'],
+    examples: [
+        {
             en: 'I worked yesterday.',
-            ru: 'Я вчера работал.'
+            ru: 'Я вчера работал.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'I' },
+                { title: 'verb', value: 'regular' },
+                { title: 'sentenceType', value: 'statement' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'I + V1+ed',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'I',
-            verb: 'regular',
-            sentenceType: 'statement',
-        }
-    },
-    {
-        text: {
+        {
             en: 'We worked yesterday.',
-            ru: 'Мы вчера работали.'
+            ru: 'Мы вчера работали.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'we' },
+                { title: 'verb', value: 'regular' },
+                { title: 'sentenceType', value: 'statement' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'We + V1+ed',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'we',
-            verb: 'regular',
-            sentenceType: 'statement',
-        }
-    },
-    {
-        text: {
+        {
             en: 'You worked yesterday.',
-            ru: 'Ты работал вчера(в ед.ч.) ИЛИ Вы работали вчера(во мн.ч.)'
+            ru: 'Ты работал вчера(в ед.ч.) ИЛИ Вы работали вчера(во мн.ч.)',
+            exampleFilter: [
+                { title: 'pronoun', value: 'you' },
+                { title: 'verb', value: 'regular' },
+                { title: 'sentenceType', value: 'statement' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'You + V1+ed',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'you',
-            verb: 'regular',
-            sentenceType: 'statement',
-        }
-    },
-    {
-        text: {
+        {
             en: 'He worked yesterday.',
-            ru: 'Он работал вчера.'
+            ru: 'Он работал вчера.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'he, she, it' },
+                { title: 'verb', value: 'regular' },
+                { title: 'sentenceType', value: 'statement' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'He/she/it + V1+ed',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'he, she, it',
-            verb: 'regular',
-            sentenceType: 'statement',
-        }
-    },
-    {
-        text: {
+        {
             en: 'They worked yesterday.',
-            ru: 'Они работали вчера.'
+            ru: 'Они работали вчера.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'they' },
+                { title: 'verb', value: 'regular' },
+                { title: 'sentenceType', value: 'statement' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'They + V1+ed',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'they',
-            verb: 'regular',
-            sentenceType: 'statement',
-        }
-    },
-
-    // Active Past Simple regular negation
-    {
-        text: {
+        {
             en: 'I did not work yesterday.',
-            ru: 'Я не работал вчера.'
+            ru: 'Я не работал вчера.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'I' },
+                { title: 'verb', value: 'regular' },
+                { title: 'sentenceType', value: 'negation' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'I + did not + V1',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'I',
-            verb: 'regular',
-            sentenceType: 'negation',
-        }
-    },
-    {
-        text: {
+        {
             en: 'We did not work yesterday.',
-            ru: 'Мы не работали вчера.'
+            ru: 'Мы не работали вчера.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'we' },
+                { title: 'verb', value: 'regular' },
+                { title: 'sentenceType', value: 'negation' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'We + did not + V1',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'we',
-            verb: 'regular',
-            sentenceType: 'negation',
-        }
-    },
-    {
-        text: {
+        {
             en: 'You did not work yesterday.',
-            ru: 'Ты не работал вчера(ед.ч.) ИЛИ Вы не работали вчера(мн.ч.)'
+            ru: 'Ты не работал вчера(ед.ч.) ИЛИ Вы не работали вчера(мн.ч.)',
+            exampleFilter: [
+                { title: 'pronoun', value: 'you' },
+                { title: 'verb', value: 'regular' },
+                { title: 'sentenceType', value: 'negation' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'You + did not + V1',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'you',
-            verb: 'regular',
-            sentenceType: 'negation',
-        }
-    },
-    {
-        text: {
+        {
             en: 'He did not work yesterday.',
-            ru: 'Он не работал вчера.'
+            ru: 'Он не работал вчера.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'he, she, it' },
+                { title: 'verb', value: 'regular' },
+                { title: 'sentenceType', value: 'negation' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'He/she/it + did not + V1',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'he, she, it',
-            verb: 'regular',
-            sentenceType: 'negation',
-        }
-    },
-    {
-        text: {
+        {
             en: 'They did not work yesterday.',
-            ru: 'Они не работали вчера.'
+            ru: 'Они не работали вчера.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'they' },
+                { title: 'verb', value: 'regular' },
+                { title: 'sentenceType', value: 'negation' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'They + did not + V1',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'they',
-            verb: 'regular',
-            sentenceType: 'negation',
-        }
-    },
-
-    // Active Past Simple irregular statement
-    {
-        text: {
+        {
             en: 'I went yesterday.',
-            ru: 'Я ходил вчера.'
+            ru: 'Я ходил вчера.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'I' },
+                { title: 'verb', value: 'irregular' },
+                { title: 'sentenceType', value: 'statement' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'I + V2',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'I',
-            verb: 'irregular',
-            sentenceType: 'statement',
-        }
-    },
-    {
-        text: {
+        {
             en: 'We went yesterday.',
-            ru: 'Мы ходили вчера.'
+            ru: 'Мы ходили вчера.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'we' },
+                { title: 'verb', value: 'irregular' },
+                { title: 'sentenceType', value: 'statement' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'We + V2',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'we',
-            verb: 'irregular',
-            sentenceType: 'statement',
-        }
-    },
-    {
-        text: {
+        {
             en: 'You went yesterday.',
-            ru: 'Ты ходил вчера(ед.ч.). ИЛИ Вы ходили вчера(мн.ч.)'
+            ru: 'Ты ходил вчера(ед.ч.). ИЛИ Вы ходили вчера(мн.ч.)',
+            exampleFilter: [
+                { title: 'pronoun', value: 'you' },
+                { title: 'verb', value: 'irregular' },
+                { title: 'sentenceType', value: 'statement' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'You + V2',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'you',
-            verb: 'irregular',
-            sentenceType: 'statement',
-        }
-    },
-    {
-        text: {
+        {
             en: 'He went yesterday.',
-            ru: 'Он ходил вчера.'
+            ru: 'Он ходил вчера.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'he, she, it' },
+                { title: 'verb', value: 'irregular' },
+                { title: 'sentenceType', value: 'statement' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'He/she/it + V2',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'he, she, it',
-            verb: 'irregular',
-            sentenceType: 'statement',
-        }
-    },
-    {
-        text: {
+        {
             en: 'They went yesterday.',
-            ru: 'Они ходили вчера.'
+            ru: 'Они ходили вчера.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'they' },
+                { title: 'verb', value: 'irregular' },
+                { title: 'sentenceType', value: 'statement' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'They + V2',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'they',
-            verb: 'irregular',
-            sentenceType: 'statement',
-        }
-    },
-
-    // Active Past Simple irregular negation
-    {
-        text: {
+        {
             en: 'I did not go yesterday.',
-            ru: 'Я не ходил вчера.'
+            ru: 'Я не ходил вчера.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'I' },
+                { title: 'verb', value: 'irregular' },
+                { title: 'sentenceType', value: 'negation' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'I + did not + V1',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'I',
-            verb: 'irregular',
-            sentenceType: 'negation',
-        }
-    },
-    {
-        text: {
+        {
             en: 'We did not go yesterday.',
-            ru: 'Мы не ходили вчера.'
+            ru: 'Мы не ходили вчера.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'we' },
+                { title: 'verb', value: 'irregular' },
+                { title: 'sentenceType', value: 'negation' },
+            ]
         },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'We + did not + V1',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'we',
-            verb: 'irregular',
-            sentenceType: 'negation',
-        }
-    },
-    {
-        text: {
-            en: 'You did not go yesterday.',
-            ru: 'Ты не ходил вчера(ед.ч.) ИЛИ Вы ходили вчера(мн.ч.)'
-        },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'You + did not + V1',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'you',
-            verb: 'irregular',
-            sentenceType: 'negation',
-        }
-    },
-    {
-        text: {
-            en: 'He did not go yesterday.',
-            ru: 'Он не ходил вчера.'
-        },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'He/she/it + did not + V1',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'he, she, it',
-            verb: 'irregular',
-            sentenceType: 'negation',
-        }
-    },
-    {
-        text: {
-            en: 'They did not go yesterday.',
-            ru: 'Они не ходили вчера.'
-        },
-        theory: 'Для фактов и обычных повседневных дел.',
-        scheme: 'They + did not + V1',
-        isTheoryShow: false,
-        type: {
-            voice: 'active',
-            time: 'past',
-            timeType: 'simple',
-            pronoun: 'they',
-            verb: 'irregular',
-            sentenceType: 'negation',
-        }
-    },
 
+        {
+            en: 'You did not go yesterday.',
+            ru: 'Ты не ходил вчера(ед.ч.) ИЛИ Вы ходили вчера(мн.ч.)',
+            exampleFilter: [
+                { title: 'pronoun', value: 'you' },
+                { title: 'verb', value: 'irregular' },
+                { title: 'sentenceType', value: 'negation' },
+            ]
+        },
+        {
+            en: 'He did not go yesterday.',
+            ru: 'Он не ходил вчера.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'he, she, it' },
+                { title: 'verb', value: 'irregular' },
+                { title: 'sentenceType', value: 'negation' },
+            ]
+        },
+        {
+            en: 'They did not go yesterday.',
+            ru: 'Они не ходили вчера.',
+            exampleFilter: [
+                { title: 'pronoun', value: 'they' },
+                { title: 'verb', value: 'irregular' },
+                { title: 'sentenceType', value: 'negation' },
+            ]
+        },
+    ]
+}
+
+//  exampleFilter : {}
+
+export const PAST_SIMPLE_prev = [
     // Active Past Simple to do statement
     {
         text: {
@@ -697,7 +546,7 @@ export const PAST_SIMPLE: Card[] = [
         }
     },
 
-     // Active Past Simple to be statement
+    // Active Past Simple to be statement
     {
         text: {
             en: 'I was an engineer.',
