@@ -40,7 +40,7 @@ export class CardFilterService {
         this.randomFilterExamples();
         this.filtedCard.next(this.mainFilterCards?.cards);
     }
-
+  
     onMainFilterChange(value: string): void {
         this.mainFilterCards = this.CARDS.find(o => o.mainFilter === value);
         this.randomFilterExamples();
