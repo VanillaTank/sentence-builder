@@ -30,11 +30,11 @@ export class FiltersComponent {
 
         this.Filters.map((f: any) => {
             if (f.type === 'btn-filter') {
-                f.content.forEach((c: any) => c.state = false);
+                f.content.forEach((c: any) => c.checked = false);
             }
             return;
         })
-        c.state = !c.state;
+        c.checked = !c.checked;
     }
 
     onTitleRowClick(c: any): void {

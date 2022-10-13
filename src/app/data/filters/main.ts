@@ -7,11 +7,11 @@ export const mainFilter: Filter = {
     content: [{
         title: 'GENERAL',
         value: 'general',
-        state: false
+        checked: false
     },
     {
         title: 'CONDITIONAL',
         value: 'conditional',
-        state: false
+        checked: false
     }]
 }

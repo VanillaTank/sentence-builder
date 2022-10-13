@@ -9,6 +9,7 @@ export interface Card {
 }
 
 export interface Example {
+    shown?: boolean
     en: string
     ru: string
     comment?: string

@@ -9,9 +9,11 @@
         <h4 class="sub-title">EXAMPLES</h4>
         <p class="tip">Чтобы увидеть больше примеров, измените настройки EXAMPLE FILTER</p>
         <div *ngFor="let e of card.examples" class="example">
-            <p class="en">{{e.en}}</p>
-            <p class="ru">{{e.ru}}</p>
-            <p *ngIf="e.comment" class="comment">{{e.comment}}</p>
+            <div *ngIf="e.shown">
+                <p class="en">{{e.en}}</p>
+                <p class="ru">{{e.ru}}</p>
+                <p *ngIf="e.comment" class="comment">{{e.comment}}</p>
+            </div>
         </div>
     </li>
 </ul>

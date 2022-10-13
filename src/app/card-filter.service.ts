@@ -3,72 +3,62 @@ import { BehaviorSubject } from "rxjs";
 
 // Cards
 import { Card, Example } from './cardInterfaces';
-import { PAST_SIMPLE } from './data/cards/PAST_SIMPLE';
-// import { PRESENT_SIMPLE } from './cards-data/PRESENT_SIMPLE';
-import { PRESENT_CONTINUOUS } from './data/cards/PRESENT_CONTINIOUS';
-// import { FUTURE_SIMPLE } from './cards-data/FUTURE_SIMPLE';
-// import { PAST_CONTINUOUS } from './cards-data/PAST_CONTINUOUS';
-// import { PRESENT_PERFECT } from './cards-data/PRESENT_PERFECT'
-import { CONDITIONAL_CARDS } from './data/cards/CONDITION';
-// import { PAST_PERFECT } from './cards-data/PAST_PERFECT'
-// import { FUTURE_CONTINUOUS } from './cards-data/FUTURE_CONTINUOUS'
+import { CARDS } from './data/cards'
 
 // Filters
 import { Filter } from './filters/filters';
-import { mainFilter } from './data/filters/main'
-import { generalFilter } from './data/filters/general'
-import { conditionalFilter } from './data/filters/conditional'
+import { FILTERS } from './data/filters'
+import { MyFilters } from './data/filters'
+
+interface CardsArray {
+    mainFilter: string;
+    cards: Card[]
+}
 
 @Injectable({
     providedIn: 'root'
 })
 
-
 export class CardFilterService {
 
-    CARDS = [
-        {
-            mainFilter: "general",
-            cards: [
-                // ...PRESENT_SIMPLE,
-                PAST_SIMPLE,
-                // ...FUTURE_SIMPLE,
-                PRESENT_CONTINUOUS,
-                // ...PAST_CONTINUOUS, ...FUTURE_CONTINUOUS,
-                // ...PRESENT_PERFECT, ...PAST_PERFECT
-            ]
-        },
-        {
-            mainFilter: "conditional",
-            cards: [...CONDITIONAL_CARDS]
-        }
-    ]
+    CARDS: CardsArray[] = [...JSON.parse(JSON.stringify(CARDS))];
+    FILTERS = FILTERS;
 
-    mainFilterCard: any = this.CARDS.find(o => o.mainFilter === 'general');
+    mainFilterCards: any = this.CARDS.find(o => o.mainFilter === 'general');
 
-    filtedCard = new BehaviorSubject<Card>(this.mainFilterCard.cards);
-    currentFilters = new BehaviorSubject<Filter[]>([mainFilter, ...generalFilter]);
+    filtedCard = new BehaviorSubject<Card>(this.mainFilterCards.cards);
+    currentFilters = new BehaviorSubject<Filter[]>([...this.FILTERS.main, ...this.FILTERS.general]);
 
-    // filteredExamples = (): Example[] | [] => {
-    //     const result: Example[] | [] = [];
-    //     for (let i = 0; i < 5; i++) {
-    //         this.mainFilterCard?.cards.map((c: Card) => {
-    //             //@ts-ignore
-    //             const randomIndex = Math.floor(Math.random() * this.mainFilterCard.cards.length);
-    //             //@ts-ignore
-    //             result.push(c.examples[randomIndex]);
-    //         })
-    //     }
-    //     return result;
-    // }
-
-    constructor() { }
+    initCards() {
+        this.CARDS.map(c => c.cards.map(card => card.examples.map(e => e.shown = false)));
+        this.mainFilterCards = this.CARDS.find(o => o.mainFilter === 'general');
+        this.randomFilterExamples();
+        this.filtedCard.next(this.mainFilterCards?.cards);
+    }
 
     onMainFilterChange(value: string): void {
-        this.mainFilterCard = this.CARDS.find(o => o.mainFilter === value);
-        this.filtedCard.next(this.mainFilterCard?.cards);
-        if (value === 'general') { this.currentFilters.next([mainFilter, ...generalFilter]); return };
-        if (value === 'conditional') { this.currentFilters.next([mainFilter, ...conditionalFilter]); return };
+        this.mainFilterCards = this.CARDS.find(o => o.mainFilter === value);
+        this.randomFilterExamples();
+        this.filtedCard.next(this.mainFilterCards?.cards);
+
+        const newFilter: Filter | Filter[] = this.FILTERS[value as keyof MyFilters];
+        this.currentFilters.next([...this.FILTERS.main, ...newFilter]);
+    }
+
+    randomFilterExamples(): void {
+        this.mainFilterCards?.cards.map((c: Card) => {
+            c.examples.map((e: Example) => e.shown = false);
+            const arrRandIndexes: number[] = [];
+            const exampleLength = c.examples.length
+            for (let i = 0; i < 5 && i <= exampleLength; i++) {
+                let randomIndex: number | never = Math.floor(Math.random() * exampleLength);
+                while (arrRandIndexes.includes(randomIndex) && arrRandIndexes.length < exampleLength) {
+                    randomIndex = Math.floor(Math.random() * exampleLength);
+                }
+                arrRandIndexes.push(randomIndex)
+                c.examples[randomIndex].shown = true;
+            }
+        })
 
     }
 

@@ -33,6 +33,6 @@ export const conditionalFilter: Filter[] = [{
                 { title: 'He, she, it', checked: false },
                 { title: 'They', checked: false },
             ],
-            state: false
+            checked: false
         }]
 }]

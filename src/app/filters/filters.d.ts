@@ -9,6 +9,6 @@ export interface Filter {
         value?: string;
         values?: { title: string, checked: boolean }[];
         selectedValue?: string;
-        state?: boolean;
+        checked?: boolean;
     }[]
 }
