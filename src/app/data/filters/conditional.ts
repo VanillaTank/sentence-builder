@@ -9,10 +9,10 @@ export const conditionalFilter: Filter[] = [{
             title: 'TYPE',
             id: 'type',
             shown: false,
-            values: [{ title: '0', checked: false },
-            { title: '1', checked: false },
-            { title: '2', checked: false },
-            { title: '3', checked: false }
+            values: [{ title: 'type 0', checked: false, value: 'type0' },
+            { title: 'type 1', checked: false, value: 'type1' },
+            { title: 'type 2', checked: false, value: 'type2' },
+            { title: 'type 3', checked: false, value: 'type3' }
             ],
             selectedValue: ''
         }]
@@ -27,11 +27,11 @@ export const conditionalFilter: Filter[] = [{
             id: 'pronoun',
             shown: false,
             values: [
-                { title: 'I', checked: false },
-                { title: 'We', checked: false },
-                { title: 'You', checked: false },
-                { title: 'He, she, it', checked: false },
-                { title: 'They', checked: false },
+                { title: 'I', checked: false, value: 'I' },
+                { title: 'We', checked: false, value: 'we' },
+                { title: 'You', checked: false, value: 'you' },
+                { title: 'He, she, it', checked: false, value: 'heSheIt' },
+                { title: 'They', checked: false, value: 'they' },
             ],
             checked: false
         }]

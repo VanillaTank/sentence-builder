@@ -8,23 +8,39 @@ import { CardFilterService } from '../card-filter.service';
     styleUrls: ['./filters.component.css']
 })
 export class FiltersComponent {
-    Filters:Filter[] | [] = [];
-    constructor(private cardFilterService: CardFilterService) { 
-        this.cardFilterService.currentFilters.subscribe((filters:any) => this.Filters = filters);
+    Filters: Filter[] | [] = [];
+
+    state: any = {
+        cardFilter: [],
+        exampleFilter: []
     }
 
-    onClickBtnFilter(c: any, id: any, v:any=undefined): void {
+    constructor(private cardFilterService: CardFilterService) {
+        this.cardFilterService.currentFilters.subscribe((filters: any) => this.Filters = filters);
+    }
+
+    onClickBtnFilter(c: any, id: any, v: any = undefined): void {
         if (id === 'mainFilter') {
             this.cardFilterService.onMainFilterChange(c.value);
         }
         else if (id === "cardFilter") {
-            // @ts-ignore
-            v.checked = !v?.checked;
-            //this.cardFilterService.onCardFilterChenge()
+            v.checked = !v.checked;
+            this.state.cardFilter = this.state.cardFilter.filter((s: any) => s.title !== c.id);
+
+            this.state.cardFilter.push(
+                {
+                    title: c.id,
+                    values: c.values
+                        .map((v: any): any => {
+                            if (v.checked) { return v.value }
+                        })
+                        .filter((v: any) => v !== undefined)
+                })
+
+            this.cardFilterService.onCardFilterChange(this.state.cardFilter)
         }
         else if (id === "exampleFilter") {
-            // @ts-ignore
-            v.checked = !v.checked
+            v.checked = !v.checked;
             // this.cardFilterService.onExampleFilterChange();
         }
 
@@ -37,6 +53,11 @@ export class FiltersComponent {
         c.checked = !c.checked;
     }
 
+
+    /**
+     * Show/Hide selector options
+     * @param c - filter.content, the very filter info
+     */
     onTitleRowClick(c: any): void {
         c.shown = !c.shown;
     }

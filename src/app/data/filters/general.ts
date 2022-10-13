@@ -10,10 +10,10 @@ export const generalFilter: Filter[] = [
                 title: 'TIME',
                 id: 'time',
                 shown: false,
-                values: [{ title: 'Past', checked: false },
-                { title: 'Present', checked: false },
-                { title: 'Future', checked: false },
-                { title: 'Future-in-the-Past', checked: false }
+                values: [{ title: 'Past', checked: false, value: 'past' },
+                { title: 'Present', checked: false, value: 'present' },
+                { title: 'Future', checked: false, value: 'future' },
+                { title: 'Future-in-the-Past', checked: false, value: 'futureInThePast' }
                 ],
                 selectedValue: ''
             },
@@ -21,10 +21,10 @@ export const generalFilter: Filter[] = [
                 title: 'TIME TYPE',
                 id: 'timeType',
                 shown: false,
-                values: [{ title: 'Simple', checked: false },
-                { title: 'Continuous', checked: false },
-                { title: 'Perfect', checked: false },
-                { title: 'Perfect Continuous', checked: false }
+                values: [{ title: 'Simple', checked: false, value: 'simple'  },
+                { title: 'Continuous', checked: false, value: 'continuous'  },
+                { title: 'Perfect', checked: false, value: 'perfect'  },
+                { title: 'Perfect Continuous', checked: false, value: 'perfectContinuous'  }
                 ],
                 selectedValue: ''
             }]
@@ -39,11 +39,11 @@ export const generalFilter: Filter[] = [
                 id: 'pronoun',
                 shown: false,
                 values: [
-                    { title: 'I', checked: false },
-                    { title: 'We', checked: false },
-                    { title: 'You', checked: false },
-                    { title: 'He, she, it', checked: false },
-                    { title: 'They', checked: false },
+                    { title: 'I', checked: false, value: 'I' },
+                    { title: 'We', checked: false, value: 'we' },
+                    { title: 'You', checked: false, value: 'you' },
+                    { title: 'He, she, it', checked: false, value: 'heSheIt' },
+                    { title: 'They', checked: false, value: 'they' },
                 ],
                 checked: false
             },
@@ -51,8 +51,8 @@ export const generalFilter: Filter[] = [
                 title: 'VERB',
                 id: 'verb',
                 shown: false,
-                values: [{ title: 'regular', checked: false },
-                { title: 'irregular', checked: false }],
+                values: [{ title: 'Regular', checked: false, value: 'regular' },
+                { title: 'Irregular', checked: false, value: 'irregular' }],
                 checked: false
             }]
     }]

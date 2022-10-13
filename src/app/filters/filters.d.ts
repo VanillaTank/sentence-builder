@@ -7,7 +7,7 @@ export interface Filter {
         shown?: boolean;
         title: string;
         value?: string;
-        values?: { title: string, checked: boolean }[];
+        values?: { title: string, checked: boolean, value:string }[];
         selectedValue?: string;
         checked?: boolean;
     }[]

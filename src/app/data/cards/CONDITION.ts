@@ -2,7 +2,7 @@ import { Card } from "../../cardInterfaces"
 
 export const CONDITIONAL_CARDS: Card[] = [
     {
-        title: "0 TYPE",
+        title: "TYPE 0",
         mainFilter: 'conditional',
         cardFilter: [
             { title: 'type', value: '0' },
@@ -22,7 +22,7 @@ export const CONDITIONAL_CARDS: Card[] = [
     },
 
     {
-        title: "1 TYPE",
+        title: "TYPE 1",
         mainFilter: 'conditional',
         cardFilter: [
             { title: 'type', value: '1' },
@@ -42,7 +42,7 @@ export const CONDITIONAL_CARDS: Card[] = [
     },
 
     {
-        title: "2 TYPE",
+        title: "TYPE 2",
         mainFilter: 'conditional',
         cardFilter: [
             { title: 'type', value: '2' },
@@ -62,7 +62,7 @@ export const CONDITIONAL_CARDS: Card[] = [
     },
 
     {
-        title: "3 TYPE",
+        title: "TYPE 3",
         mainFilter: 'conditional',
         cardFilter: [
             { title: 'type', value: '3' },

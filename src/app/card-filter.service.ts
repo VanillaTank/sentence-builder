@@ -15,6 +15,11 @@ interface CardsArray {
     cards: Card[]
 }
 
+interface State {
+    title: string;
+    values: string[];
+}
+
 @Injectable({
     providedIn: 'root'
 })
@@ -26,7 +31,7 @@ export class CardFilterService {
 
     mainFilterCards: any = this.CARDS.find(o => o.mainFilter === 'general');
 
-    filtedCard = new BehaviorSubject<Card>(this.mainFilterCards.cards);
+    filtedCard = new BehaviorSubject<Card[]>(this.mainFilterCards.cards);
     currentFilters = new BehaviorSubject<Filter[]>([...this.FILTERS.main, ...this.FILTERS.general]);
 
     initCards() {
@@ -62,15 +67,23 @@ export class CardFilterService {
 
     }
 
-    // onCardFilterChenge(value: { title: string, value: string }) {
-    //     const filtedCard = this.mainFilterCard?.cards
-    //         .map((c: Card) => c.cardFilter.filter(cardFilter => {
-    //             cardFilter.title === value.title && cardFilter.value === value.value
-    //         }));
-    //     this.filtedCard.next(filtedCard);
-    // }
+    onCardFilterChange(state: State[]) {
+        const filtedCard: Card[] = [];
+        this.mainFilterCards?.cards.map((c: any) => {
+            c.cardFilter.map((cf: any) => {
+                state.forEach((s: any) => {
+                    if (s.title === cf.title && s.values.includes(cf.value)) {
+                        if(!filtedCard.some((fc => fc.title === c.title))) {
+                            filtedCard.push(c);
+                        }
+                    }
+                })
+            })
+        })
+        this.filtedCard.next(filtedCard);
+    }
 
-    // onExampleFilterChange(value: { title: string, value: string }[]) {
+    // onExampleFilterChange(state: State[]) {
     //     // this.filtedCard.map(c => {
     //     //     c.examples = c.examples.filter(e => {
     //     //         e.exampleFilter.map(exampleFilter => {
