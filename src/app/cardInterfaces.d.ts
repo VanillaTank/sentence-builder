@@ -1,5 +1,6 @@
 export interface Card {
     mainFilter: string
+    shown?: boolean
     title: string
     cardFilter: { title: string, value: string }[]
     theory: string

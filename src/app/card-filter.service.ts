@@ -35,12 +35,15 @@ export class CardFilterService {
     currentFilters = new BehaviorSubject<Filter[]>([...this.FILTERS.main, ...this.FILTERS.general]);
 
     initCards() {
-        this.CARDS.map(c => c.cards.map(card => card.examples.map(e => e.shown = false)));
+        this.CARDS.map(c => c.cards.map(card => {
+            card.shown = true;
+            card.examples.map(e => e.shown = false)
+        }));
         this.mainFilterCards = this.CARDS.find(o => o.mainFilter === 'general');
         this.randomFilterExamples();
         this.filtedCard.next(this.mainFilterCards?.cards);
     }
-  
+
     onMainFilterChange(value: string): void {
         this.mainFilterCards = this.CARDS.find(o => o.mainFilter === value);
         this.randomFilterExamples();
@@ -68,45 +71,42 @@ export class CardFilterService {
     }
 
     onCardFilterChange(state: State[]) {
+        this.CARDS.map(c => c.cards.map(card => {
+            card.shown = false;
+        }));
+
         const filtedCard: Card[] = [];
         this.mainFilterCards?.cards.map((c: any) => {
             c.cardFilter.map((cf: any) => {
                 state.forEach((s: any) => {
                     if (s.title === cf.title && s.values.includes(cf.value)) {
-                        if(!filtedCard.some((fc => fc.title === c.title))) {
+                        if (!filtedCard.some((fc => fc.title === c.title))) {
+                            c.shown = true;      
                             filtedCard.push(c);
                         }
                     }
                 })
             })
         })
-        this.filtedCard.next(filtedCard);
+        this.filtedCard.next(this.mainFilterCards?.cards);
     }
 
-    // onExampleFilterChange(state: State[]) {
-    //     // this.filtedCard.map(c => {
-    //     //     c.examples = c.examples.filter(e => {
-    //     //         e.exampleFilter.map(exampleFilter => {
-    //     //             if (exampleFilter.title === value.title && exampleFilter.value === value.value) {
-    //     //                 return true
-    //     //             }
-    //     //             return false
-    //     //         })
-    //     //     })
-    //     // })
-    //     // this.filterdExamples = () => {
-    //     //     const result: Example[] | [] = [];
-    //     //     this.mainFilterCard?.cards.map((c: Card) => {
-    //     //         c.examples.map((e) => {
-    //     //             e.exampleFilter.map(exampleFilter => {
-    //     //                 if (exampleFilter.title === value.title && exampleFilter.value === value.value) {
-    //     //                     //@ts-ignore
-    //     //                     result.push(e);
-    //     //                 }
-    //     //             })
-    //     //         })
-    //     //     })
-    //     //     return result;
-    //     // }
-    // }
+    onExampleFilterChange(state: State[]) {
+        this.CARDS.map(c => c.cards.map(card => {
+            card.examples.map(e => e.shown = false)
+        }));
+        this.mainFilterCards?.cards.map((c: any) => {
+            c.examples.map((e: Example) => {
+                e.exampleFilter.map((ef: any) => {
+                    state.forEach(s => {
+                        if (s.title === ef.title && s.values.includes(ef.value)) {
+                            e.shown = true;
+                        }
+                    })
+                })
+            })
+        }); 
+
+        this.filtedCard.next(this.mainFilterCards?.cards);
+    }
 }

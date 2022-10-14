@@ -41,7 +41,17 @@ export class FiltersComponent {
         }
         else if (id === "exampleFilter") {
             v.checked = !v.checked;
-            // this.cardFilterService.onExampleFilterChange();
+            this.state.exampleFilter.push(
+                {
+                    title: c.id,
+                    values: c.values
+                        .map((v: any): any => {
+                            if (v.checked) { return v.value }
+                        })
+                        .filter((v: any) => v !== undefined)
+                })
+
+            this.cardFilterService.onExampleFilterChange(this.state.exampleFilter);
         }
 
         this.Filters.map((f: any) => {
