@@ -8,7 +8,7 @@ import { CardFilterService } from '../card-filter.service';
     styleUrls: ['./filters.component.css']
 })
 export class FiltersComponent {
-    Filters: Filter[] | [] = [];
+    Filters: Filter[] = [];
 
     state: any = {
         cardFilter: [],
@@ -22,35 +22,61 @@ export class FiltersComponent {
     onClickBtnFilter(c: any, id: any, v: any = undefined): void {
         if (id === 'mainFilter') {
             this.cardFilterService.onMainFilterChange(c.value);
+
+            // TODO Random examples
+            this.state.exampleFilter = {};
+
+            this.Filters.find(f => f.id === "exampleFilter")?.content.map(f => {
+                const arrRandIndexes: number[] = [];
+                const exampleLength = f.values?.length;
+
+                for (let i = 0; i < 2 && i <= exampleLength; i++) {
+                    let randomIndex: number | never = Math.floor(Math.random() * exampleLength);
+                    while (arrRandIndexes.includes(randomIndex) && arrRandIndexes.length < exampleLength) {
+                        randomIndex = Math.floor(Math.random() * exampleLength);
+                    }
+                    arrRandIndexes.push(randomIndex);
+                    f.values[randomIndex].checked = true;
+                    if (this.state.exampleFilter[f.id]) {
+                        this.state.exampleFilter[f.id].push(f.values[randomIndex].value);
+                    }
+                    else { this.state.exampleFilter[f.id] = [f.values[randomIndex].value] }
+                }
+
+            })
+
+            console.log(this.state.exampleFilter);
+            
+
+            this.cardFilterService.onExampleFilterChange(this.state.exampleFilter);
         }
         else if (id === "cardFilter") {
             v.checked = !v.checked;
-            this.state.cardFilter = this.state.cardFilter.filter((s: any) => s.title !== c.id);
+            this.state.cardFilter = {};
 
-            this.state.cardFilter.push(
-                {
-                    title: c.id,
-                    values: c.values
-                        .map((v: any): any => {
-                            if (v.checked) { return v.value }
-                        })
-                        .filter((v: any) => v !== undefined)
+            this.Filters.find(f => f.id === "cardFilter")?.content.map(c => {
+                c.values?.map(v => {
+                    if (v.checked) {
+                        if (this.state.cardFilter[c.id]) { this.state.cardFilter[c.id].push(v.value) }
+                        else { this.state.cardFilter[c.id] = [v.value] }
+                    }
                 })
+            })
 
             this.cardFilterService.onCardFilterChange(this.state.cardFilter)
         }
         else if (id === "exampleFilter") {
             v.checked = !v.checked;
-            this.state.exampleFilter.push(
-                {
-                    title: c.id,
-                    values: c.values
-                        .map((v: any): any => {
-                            if (v.checked) { return v.value }
-                        })
-                        .filter((v: any) => v !== undefined)
-                })
+            this.state.exampleFilter = {};
 
+            this.Filters.find(f => f.id === "exampleFilter")?.content.map(c => {
+                c.values?.map(v => {
+                    if (v.checked) {
+                        if (this.state.exampleFilter[c.id]) { this.state.exampleFilter[c.id].push(v.value) }
+                        else { this.state.exampleFilter[c.id] = [v.value] }
+                    }
+                })
+            })
             this.cardFilterService.onExampleFilterChange(this.state.exampleFilter);
         }
 

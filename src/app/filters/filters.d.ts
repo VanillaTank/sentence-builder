@@ -3,11 +3,11 @@ export interface Filter {
     id: string;
     type: 'list-filter' | 'btn-filter';
     content: {
-        id?: string;
+        id: string;
         shown?: boolean;
         title: string;
         value?: string;
-        values?: { title: string, checked: boolean, value:string }[];
+        values: { title: string, checked: boolean, value:string }[];
         selectedValue?: string;
         checked?: boolean;
     }[]

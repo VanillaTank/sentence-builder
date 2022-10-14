@@ -2,11 +2,11 @@ export interface Card {
     mainFilter: string
     shown?: boolean
     title: string
-    cardFilter: { title: string, value: string }[]
+    cardFilter: any | { title: string, value: string }[]
     theory: string
     comments?: string
     schemas: string[]
-    examples: Example[]
+    examples: Example[] | any
 }
 
 export interface Example {
@@ -14,5 +14,5 @@ export interface Example {
     en: string
     ru: string
     comment?: string
-    exampleFilter: { title: string, value: string }[]
+    exampleFilter:  any | { title: string, value: string }[]
 }

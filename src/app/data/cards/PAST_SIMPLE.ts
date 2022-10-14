@@ -3,194 +3,194 @@ import { Card } from "../../cardInterfaces"
 export const PAST_SIMPLE: Card = {
     title: "ACTIVE PAST SIMPLE",
     mainFilter: 'general',
-    cardFilter: [
-        { title: 'time', value: 'past' },
-        { title: 'timeType', value: 'simple' },
-        { title: 'voice', value: 'active' },
-    ],
+    cardFilter:  {
+        time: 'past',
+        timeType: 'simple',
+        voice: 'active'
+    },
     theory: 'Для фактов и обычных повседневных дел.',
     schemas: ['Subject + V1+ed/V2', 'Subject + did not + V1', 'Did + subject + V1 ?'],
     examples: [
         {
             en: 'I worked yesterday.',
             ru: 'Я вчера работал.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'I' },
-                { title: 'verb', value: 'regular' },
-                { title: 'sentenceType', value: 'statement' },
-            ]
+            exampleFilter: {
+                pronoun: 'I',
+                verb: 'regular',
+                sentenceType: 'statement'
+            }
         },
         {
             en: 'We worked yesterday.',
             ru: 'Мы вчера работали.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'we' },
-                { title: 'verb', value: 'regular' },
-                { title: 'sentenceType', value: 'statement' },
-            ]
+            exampleFilter: {
+                pronoun: 'we',
+                verb: 'regular',
+                sentenceType: 'statement'
+            }
         },
         {
             en: 'You worked yesterday.',
             ru: 'Ты работал вчера(в ед.ч.) ИЛИ Вы работали вчера(во мн.ч.)',
-            exampleFilter: [
-                { title: 'pronoun', value: 'you' },
-                { title: 'verb', value: 'regular' },
-                { title: 'sentenceType', value: 'statement' },
-            ]
+            exampleFilter: {
+                pronoun: 'you',
+                verb: 'regular',
+                sentenceType: 'statement'
+            }
         },
         {
             en: 'He worked yesterday.',
             ru: 'Он работал вчера.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'he, she, it' },
-                { title: 'verb', value: 'regular' },
-                { title: 'sentenceType', value: 'statement' },
-            ]
+            exampleFilter: {
+                pronoun: 'heSheIt',
+                verb: 'regular',
+                sentenceType: 'statement'
+            }
         },
         {
             en: 'They worked yesterday.',
             ru: 'Они работали вчера.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'they' },
-                { title: 'verb', value: 'regular' },
-                { title: 'sentenceType', value: 'statement' },
-            ]
+            exampleFilter: {
+                pronoun: 'they',
+                verb: 'regular',
+                sentenceType: 'statement'
+            }
         },
         {
             en: 'I did not work yesterday.',
             ru: 'Я не работал вчера.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'I' },
-                { title: 'verb', value: 'regular' },
-                { title: 'sentenceType', value: 'negation' },
-            ]
+            exampleFilter: {
+                pronoun: 'I',
+                verb: 'regular',
+                sentenceType: 'negation'
+            }
         },
         {
             en: 'We did not work yesterday.',
             ru: 'Мы не работали вчера.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'we' },
-                { title: 'verb', value: 'regular' },
-                { title: 'sentenceType', value: 'negation' },
-            ]
+            exampleFilter: {
+                pronoun: 'we',
+                verb: 'regular',
+                sentenceType: 'negation'
+            }
         },
         {
             en: 'You did not work yesterday.',
             ru: 'Ты не работал вчера(ед.ч.) ИЛИ Вы не работали вчера(мн.ч.)',
-            exampleFilter: [
-                { title: 'pronoun', value: 'you' },
-                { title: 'verb', value: 'regular' },
-                { title: 'sentenceType', value: 'negation' },
-            ]
+            exampleFilter: {
+                pronoun: 'you',
+                verb: 'regular',
+                sentenceType: 'negation'
+            }
         },
         {
             en: 'He did not work yesterday.',
             ru: 'Он не работал вчера.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'he, she, it' },
-                { title: 'verb', value: 'regular' },
-                { title: 'sentenceType', value: 'negation' },
-            ]
+            exampleFilter: {
+                pronoun: 'heSheIt',
+                verb: 'regular',
+                sentenceType: 'negation'
+            }
         },
         {
             en: 'They did not work yesterday.',
             ru: 'Они не работали вчера.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'they' },
-                { title: 'verb', value: 'regular' },
-                { title: 'sentenceType', value: 'negation' },
-            ]
+            exampleFilter: {
+                pronoun: 'they',
+                verb: 'regular',
+                sentenceType: 'negation'
+            }
         },
         {
             en: 'I went yesterday.',
             ru: 'Я ходил вчера.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'I' },
-                { title: 'verb', value: 'irregular' },
-                { title: 'sentenceType', value: 'statement' },
-            ]
+            exampleFilter: {
+                pronoun: 'I',
+                verb: 'irregular',
+                sentenceType: 'statement'
+            }
         },
         {
             en: 'We went yesterday.',
             ru: 'Мы ходили вчера.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'we' },
-                { title: 'verb', value: 'irregular' },
-                { title: 'sentenceType', value: 'statement' },
-            ]
+            exampleFilter: {
+                pronoun: 'we',
+                verb: 'irregular',
+                sentenceType: 'statement'
+            }
         },
         {
             en: 'You went yesterday.',
             ru: 'Ты ходил вчера(ед.ч.). ИЛИ Вы ходили вчера(мн.ч.)',
-            exampleFilter: [
-                { title: 'pronoun', value: 'you' },
-                { title: 'verb', value: 'irregular' },
-                { title: 'sentenceType', value: 'statement' },
-            ]
+            exampleFilter: {
+                pronoun: 'you',
+                verb: 'irregular',
+                sentenceType: 'statement'
+            }
         },
         {
             en: 'He went yesterday.',
             ru: 'Он ходил вчера.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'he, she, it' },
-                { title: 'verb', value: 'irregular' },
-                { title: 'sentenceType', value: 'statement' },
-            ]
+            exampleFilter: {
+                pronoun: 'heSheIt',
+                verb: 'irregular',
+                sentenceType: 'statement'
+            }
         },
         {
             en: 'They went yesterday.',
             ru: 'Они ходили вчера.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'they' },
-                { title: 'verb', value: 'irregular' },
-                { title: 'sentenceType', value: 'statement' },
-            ]
+            exampleFilter: {
+                pronoun: 'they',
+                verb: 'irregular',
+                sentenceType: 'statement'
+            }
         },
         {
             en: 'I did not go yesterday.',
             ru: 'Я не ходил вчера.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'I' },
-                { title: 'verb', value: 'irregular' },
-                { title: 'sentenceType', value: 'negation' },
-            ]
+            exampleFilter: {
+                pronoun: 'I',
+                verb: 'irregular',
+                sentenceType: 'negation'
+            }
         },
         {
             en: 'We did not go yesterday.',
             ru: 'Мы не ходили вчера.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'we' },
-                { title: 'verb', value: 'irregular' },
-                { title: 'sentenceType', value: 'negation' },
-            ]
+            exampleFilter: {
+                pronoun: 'we',
+                verb: 'irregular',
+                sentenceType: 'negation'
+            }
         },
 
         {
             en: 'You did not go yesterday.',
             ru: 'Ты не ходил вчера(ед.ч.) ИЛИ Вы ходили вчера(мн.ч.)',
-            exampleFilter: [
-                { title: 'pronoun', value: 'you' },
-                { title: 'verb', value: 'irregular' },
-                { title: 'sentenceType', value: 'negation' },
-            ]
+            exampleFilter: {
+                pronoun: 'you',
+                verb: 'irregular',
+                sentenceType: 'negation'
+            }
         },
         {
             en: 'He did not go yesterday.',
             ru: 'Он не ходил вчера.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'he, she, it' },
-                { title: 'verb', value: 'irregular' },
-                { title: 'sentenceType', value: 'negation' },
-            ]
+            exampleFilter: {
+                pronoun: 'heSheIt',
+                verb: 'irregular',
+                sentenceType: 'negation'
+            }
         },
         {
             en: 'They did not go yesterday.',
             ru: 'Они не ходили вчера.',
-            exampleFilter: [
-                { title: 'pronoun', value: 'they' },
-                { title: 'verb', value: 'irregular' },
-                { title: 'sentenceType', value: 'negation' },
-            ]
+            exampleFilter: {
+                pronoun: 'they',
+                verb: 'irregular',
+                sentenceType: 'negation'
+            }
         },
     ]
 }
