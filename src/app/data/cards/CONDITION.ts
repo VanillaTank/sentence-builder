@@ -5,7 +5,7 @@ export const CONDITIONAL_CARDS: Card[] = [
         title: "TYPE 0",
         mainFilter: 'conditional',
         cardFilter: {
-            type: '0'
+            type: 'type0'
         },
         theory: 'Факты, истины ,закономерности, законы природы.',
         schemas: ['Condition: If/when + Present Simple, Main part: Present Simple'],
@@ -25,7 +25,7 @@ export const CONDITIONAL_CARDS: Card[] = [
         title: "TYPE 1",
         mainFilter: 'conditional',
         cardFilter: {
-            type: '1'
+            type: 'type1'
         },
         theory: 'Условие. Что-то случиться, если...',
         schemas: ['Condition: If/when + Present Simple, Main part: Future Simple'],
@@ -45,7 +45,7 @@ export const CONDITIONAL_CARDS: Card[] = [
         title: "TYPE 2",
         mainFilter: 'conditional',
         cardFilter: {
-            type: '2'
+            type: 'type2'
         },
         theory: 'Воображаемая или нереальная ситуация в настоящем.',
         schemas: ['Condition: If/when + Past Simple, Main part: would + V1'],
@@ -65,7 +65,7 @@ export const CONDITIONAL_CARDS: Card[] = [
         title: "TYPE 3",
         mainFilter: 'conditional',
         cardFilter: {
-            type: '3'
+            type: 'type3'
         },
         theory: 'Воображаемая или нереальная ситуация в прошлом.',
         schemas: ['Condition: If/when + Past Perfect, Main part: would + have V3/Ved'],

@@ -8,7 +8,6 @@ export interface Filter {
         title: string;
         value?: string;
         values: { title: string, checked: boolean, value:string }[];
-        selectedValue?: string;
         checked?: boolean;
     }[]
 }

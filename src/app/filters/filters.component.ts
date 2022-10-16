@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Filter } from './filters';
 import { CardFilterService } from '../card-filter.service';
 
@@ -7,50 +7,54 @@ import { CardFilterService } from '../card-filter.service';
     templateUrl: './filters.component.html',
     styleUrls: ['./filters.component.css']
 })
-export class FiltersComponent {
+export class FiltersComponent implements OnInit {
     Filters: Filter[] = [];
 
     state: any = {
-        cardFilter: [],
-        exampleFilter: []
+        cardFilter: {},
+        exampleFilter: {}
     }
 
     constructor(private cardFilterService: CardFilterService) {
         this.cardFilterService.currentFilters.subscribe((filters: any) => this.Filters = filters);
     }
 
+    ngOnInit(): void {
+        this.createRandomExampleFilter();
+    }
+
+    createRandomExampleFilter() {
+        this.state.exampleFilter = {};
+
+        this.Filters.find(f => f.id === "exampleFilter")?.content.map(f => {
+            const arrRandIndexes: number[] = [];
+            const exampleLength = f.values?.length;
+
+            for (let i = 0; i < 2 && i <= exampleLength; i++) {
+                let randomIndex: number | never = Math.floor(Math.random() * exampleLength);
+                while (arrRandIndexes.includes(randomIndex) && arrRandIndexes.length < exampleLength) {
+                    randomIndex = Math.floor(Math.random() * exampleLength);
+                }
+                arrRandIndexes.push(randomIndex);
+                f.values[randomIndex].checked = true;
+                if (this.state.exampleFilter[f.id]) {
+                    this.state.exampleFilter[f.id].push(f.values[randomIndex].value);
+                }
+                else { this.state.exampleFilter[f.id] = [f.values[randomIndex].value] }
+            }
+
+        })
+
+        this.cardFilterService.onExampleFilterChange(this.state.exampleFilter);
+    }
+
     onClickBtnFilter(c: any, id: any, v: any = undefined): void {
         if (id === 'mainFilter') {
             this.cardFilterService.onMainFilterChange(c.value);
-
-            // TODO Random examples
-            this.state.exampleFilter = {};
-
-            this.Filters.find(f => f.id === "exampleFilter")?.content.map(f => {
-                const arrRandIndexes: number[] = [];
-                const exampleLength = f.values?.length;
-
-                for (let i = 0; i < 2 && i <= exampleLength; i++) {
-                    let randomIndex: number | never = Math.floor(Math.random() * exampleLength);
-                    while (arrRandIndexes.includes(randomIndex) && arrRandIndexes.length < exampleLength) {
-                        randomIndex = Math.floor(Math.random() * exampleLength);
-                    }
-                    arrRandIndexes.push(randomIndex);
-                    f.values[randomIndex].checked = true;
-                    if (this.state.exampleFilter[f.id]) {
-                        this.state.exampleFilter[f.id].push(f.values[randomIndex].value);
-                    }
-                    else { this.state.exampleFilter[f.id] = [f.values[randomIndex].value] }
-                }
-
-            })
-
-            console.log(this.state.exampleFilter);
-            
-
-            this.cardFilterService.onExampleFilterChange(this.state.exampleFilter);
+            this.createRandomExampleFilter();
         }
-        else if (id === "cardFilter") {
+
+        if (id === "cardFilter") {
             v.checked = !v.checked;
             this.state.cardFilter = {};
 
@@ -63,9 +67,10 @@ export class FiltersComponent {
                 })
             })
 
-            this.cardFilterService.onCardFilterChange(this.state.cardFilter)
+            this.cardFilterService.onCardFilterChange(this.state.cardFilter);
         }
-        else if (id === "exampleFilter") {
+
+        if (id === "exampleFilter") {
             v.checked = !v.checked;
             this.state.exampleFilter = {};
 

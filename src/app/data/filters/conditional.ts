@@ -13,8 +13,7 @@ export const conditionalFilter: Filter[] = [{
             { title: 'type 1', checked: false, value: 'type1' },
             { title: 'type 2', checked: false, value: 'type2' },
             { title: 'type 3', checked: false, value: 'type3' }
-            ],
-            selectedValue: ''
+            ]
         }]
 },
 {
