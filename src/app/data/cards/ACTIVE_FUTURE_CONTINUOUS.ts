@@ -376,7 +376,7 @@ export const ACTIVE_FUTURE_CONTINUOUS: Card = {
             ru: "Я буду собой завтра весь день.",
             exampleFilter: {
                 pronoun: "I",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "statement"
             }
         },
@@ -385,7 +385,7 @@ export const ACTIVE_FUTURE_CONTINUOUS: Card = {
             ru: "Мы будем собой завтра весь день.",
             exampleFilter: {
                 pronoun: "we",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "statement"
             }
         },
@@ -394,7 +394,7 @@ export const ACTIVE_FUTURE_CONTINUOUS: Card = {
             ru: "Ты будешь собой завтра весь день(ед.ч.) ИЛИ Вы будете собой завтра весь день(мн.ч.)",
             exampleFilter: {
                 pronoun: "you",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "statement"
             }
         },
@@ -403,7 +403,7 @@ export const ACTIVE_FUTURE_CONTINUOUS: Card = {
             ru: "Он будет собой завтра весь день.",
             exampleFilter: {
                 pronoun: "heSheIt",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "statement"
             }
         }
@@ -414,7 +414,7 @@ export const ACTIVE_FUTURE_CONTINUOUS: Card = {
             ru: "Они будут собой завтра весь день.",
             exampleFilter: {
                 pronoun: "they",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "statement"
             }
         },
@@ -423,7 +423,7 @@ export const ACTIVE_FUTURE_CONTINUOUS: Card = {
             ru: "Я не буду собой завтра весь день.",
             exampleFilter: {
                 pronoun: "I",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "negation"
             }
         },
@@ -432,7 +432,7 @@ export const ACTIVE_FUTURE_CONTINUOUS: Card = {
             ru: "Мы не будем собой завтра весь день.",
             exampleFilter: {
                 pronoun: "we",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "negation"
             }
         },
@@ -441,7 +441,7 @@ export const ACTIVE_FUTURE_CONTINUOUS: Card = {
             ru: "Ты не будешь собой завтра весь день.(ед.ч.) ИЛИ Вы не будете собой завтра весь день(мн.ч.)",
             exampleFilter: {
                 pronoun: "you",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "negation"
             }
         },
@@ -450,7 +450,7 @@ export const ACTIVE_FUTURE_CONTINUOUS: Card = {
             ru: "Он не будет собой завтра весь день.",
             exampleFilter: {
                 pronoun: "heSheIt",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "negation"
             }
         },
@@ -459,7 +459,7 @@ export const ACTIVE_FUTURE_CONTINUOUS: Card = {
             ru: "Они не будут собой завтра весь день.",
             exampleFilter: {
                 pronoun: "they",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "negation"
             }
         }

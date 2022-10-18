@@ -86,13 +86,13 @@ export class CardFilterService {
     onExampleFilterChange(query: any): void {
 
         if (Object.keys(query).length === 0) {
-            this.mainFilterCards.cards.map((c: Card) => c.examples.forEach((e: Example) => e.show = true))
+            this.mainFilterCards.cards.forEach((c: Card) => c.examples.forEach((e: Example) => e.show = true))
             this.filtedCard.next(this.mainFilterCards?.cards)
             return;
         }
 
 
-        const switchedByExampleFilter = this.mainFilterCards?.cards.map((card: Card) => {
+        this.mainFilterCards?.cards.forEach((card: Card) => {
             card.examples.forEach((e: Example) => {
                 for (let q in query) {
                     if (query[q].length > 0 && !query[q].includes(e.exampleFilter[q])) {
@@ -105,6 +105,6 @@ export class CardFilterService {
             return card;
         })
 
-        this.filtedCard.next(switchedByExampleFilter);
+        this.filtedCard.next(this.mainFilterCards?.cards);
     }
 }

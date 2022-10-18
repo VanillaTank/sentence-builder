@@ -45,7 +45,7 @@ export const generalFilter: Filter[] = [
             {
                 title: 'PRONOUN',
                 id: 'pronoun',
-                shown: false,
+                shown: true,
                 values: [
                     { title: 'I', checked: false, value: 'I' },
                     { title: 'We', checked: false, value: 'we' },
@@ -58,7 +58,7 @@ export const generalFilter: Filter[] = [
             {
                 title: 'VERB',
                 id: 'verb',
-                shown: false,
+                shown: true,
                 values: [
                     { title: 'Regular', checked: false, value: 'regular' },
                     { title: 'Irregular', checked: false, value: 'irregular' },
@@ -71,15 +71,15 @@ export const generalFilter: Filter[] = [
             {
                 title: 'SENTENCE TYPE',
                 id: 'sentenceType',
-                shown: false,
+                shown: true,
                 values: [
                     { title: 'Statement', checked: false, value: 'statement' },
                     { title: 'Negation', checked: false, value: 'negation' },
-                    { title: 'General (yes/no) question', checked: false, value: 'generalQuestion' },
-                    { title: 'Special (wh-) question', checked: false, value: 'specialQuestion' },
-                    { title: 'Who/what question', checked: false, value: 'whoWhatQuestion' },
-                    { title: 'Alternative question', checked: false, value: 'alternativeQuestion' },
-                    { title: 'Tag question', checked: false, value: 'tagQuestion' },
+                    // { title: 'General (yes/no) question', checked: false, value: 'generalQuestion' },
+                    // { title: 'Special (wh-) question', checked: false, value: 'specialQuestion' },
+                    // { title: 'Who/what question', checked: false, value: 'whoWhatQuestion' },
+                    // { title: 'Alternative question', checked: false, value: 'alternativeQuestion' },
+                    // { title: 'Tag question', checked: false, value: 'tagQuestion' },
                 ],
                 checked: false
             }

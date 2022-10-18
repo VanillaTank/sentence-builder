@@ -376,7 +376,7 @@ export const ACTIVE_FUTURE_SIMPLE: Card = {
             ru: "Я буду студентом в следующем году.",
             exampleFilter: {
               pronoun: "I",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "statement"
             }
           },
@@ -385,7 +385,7 @@ export const ACTIVE_FUTURE_SIMPLE: Card = {
             ru: "Мы будем студентами в следующем году.",
             exampleFilter: {
               pronoun: "we",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "statement"
             }
           },
@@ -394,7 +394,7 @@ export const ACTIVE_FUTURE_SIMPLE: Card = {
             ru: "Ты будешь студентом в следующем году(ед.ч.) ИЛИ Вы будете студентами в следующем году(мн.ч.)",
             exampleFilter: {
               pronoun: "you",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "statement"
             }
           },
@@ -403,7 +403,7 @@ export const ACTIVE_FUTURE_SIMPLE: Card = {
             ru: "Он будет студентом в следующем году.",
             exampleFilter: {
               pronoun: "heSheIt",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "statement"
             }
           },
@@ -412,7 +412,7 @@ export const ACTIVE_FUTURE_SIMPLE: Card = {
             ru: "Они будут студентами в следующем году.",
             exampleFilter: {
               pronoun: "they",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "statement"
             }
           },
@@ -421,7 +421,7 @@ export const ACTIVE_FUTURE_SIMPLE: Card = {
             ru: "Я не будет студентом в следующем году.",
             exampleFilter: {
               pronoun: "I",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "negation"
             }
           },
@@ -430,7 +430,7 @@ export const ACTIVE_FUTURE_SIMPLE: Card = {
             ru: "Мы не будем студентами в следующем году.",
             exampleFilter: {
               pronoun: "we",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "negation"
             }
           },
@@ -439,7 +439,7 @@ export const ACTIVE_FUTURE_SIMPLE: Card = {
             ru: "Ты не будешь студентом в следующем году(ед.ч.) ИЛИ Вы не будете студентами в следующем году(мн.ч.)",
             exampleFilter: {
               pronoun: "you",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "negation"
             }
           },
@@ -448,7 +448,7 @@ export const ACTIVE_FUTURE_SIMPLE: Card = {
             ru: "Он не будет студентом в следующем году.",
             exampleFilter: {
               pronoun: "heSheIt",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "negation"
             }
           },
@@ -457,7 +457,7 @@ export const ACTIVE_FUTURE_SIMPLE: Card = {
             ru: "Они не будут студентами в следующем году.",
             exampleFilter: {
               pronoun: "they",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "negation"
             }
           }

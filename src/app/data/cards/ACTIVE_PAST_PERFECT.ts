@@ -376,7 +376,7 @@ export const ACTIVE_PAST_PERFECT: Card = {
             ru: "Перед тем, как я стал менеджером, я был инженером.",
             exampleFilter: {
               pronoun: "I",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "statement"
             }
           },
@@ -385,7 +385,7 @@ export const ACTIVE_PAST_PERFECT: Card = {
             ru: "Перед тем, как мы стали менеджерами, мы были инженерами.",
             exampleFilter: {
               pronoun: "we",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "statement"
             }
           },
@@ -394,7 +394,7 @@ export const ACTIVE_PAST_PERFECT: Card = {
             ru: "Перед тем, как ты стал менеджером, ты был инженером(ед.ч.) ИЛИ Перед тем, как вы стали менеджерами, вы были инженерами(мн.ч.)",
             exampleFilter: {
               pronoun: "you",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "statement"
             }
           },
@@ -403,7 +403,7 @@ export const ACTIVE_PAST_PERFECT: Card = {
             ru: "Перед тем, как он стал менеджером, он был инженером.",
             exampleFilter: {
               pronoun: "heSheIt",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "statement"
             }
           },
@@ -412,7 +412,7 @@ export const ACTIVE_PAST_PERFECT: Card = {
             ru: "Перед тем, как они стали менеджерами, они были инженерами",
             exampleFilter: {
               pronoun: "they",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "statement"
             }
           },
@@ -421,7 +421,7 @@ export const ACTIVE_PAST_PERFECT: Card = {
             ru: "Перед тем, как я стал менеджером, я не был инженером.",
             exampleFilter: {
               pronoun: "I",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "negation"
             }
           },
@@ -430,7 +430,7 @@ export const ACTIVE_PAST_PERFECT: Card = {
             ru: "Перед тем, как мы стали менеджерами, мы не были инженерами.",
             exampleFilter: {
               pronoun: "we",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "negation"
             }
           },
@@ -439,7 +439,7 @@ export const ACTIVE_PAST_PERFECT: Card = {
             ru: "Перед тем, как ты стал менеджером, ты не был инженером(ед.ч.) ИЛИ Перед тем, как вы стали менеджерами, вы не был инженерами.(мн.ч.)",
             exampleFilter: {
               pronoun: "you",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "negation"
             }
           },
@@ -448,7 +448,7 @@ export const ACTIVE_PAST_PERFECT: Card = {
             ru: "Перед тем, как он стал менеджером, он не был инженером.",
             exampleFilter: {
               pronoun: "heSheIt",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "negation"
             }
           },
@@ -457,7 +457,7 @@ export const ACTIVE_PAST_PERFECT: Card = {
             ru: "Перед тем, как они стали менеджерами, они не были инженерами.",
             exampleFilter: {
               pronoun: "they",
-              verb: "toBo",
+              verb: "toBe",
               sentenceType: "negation"
             }
           }

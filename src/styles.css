@@ -23,6 +23,9 @@ body::-webkit-scrollbar {
 .bg {
     background-color: #D5C1CC;
     background-image: url('./bgk.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     position: fixed;
     top: 0;
     left: 0;

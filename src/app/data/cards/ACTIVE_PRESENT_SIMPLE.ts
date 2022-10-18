@@ -376,7 +376,7 @@ export const ACTIVE_PRESENT_SIMPLE: Card = {
             ru: "Я - инженер.",
             exampleFilter: {
                 pronoun: "I",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "statement"
             }
         },
@@ -385,7 +385,7 @@ export const ACTIVE_PRESENT_SIMPLE: Card = {
             ru: "Мы инженеры.",
             exampleFilter: {
                 pronoun: "we",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "statement"
             }
         },
@@ -394,7 +394,7 @@ export const ACTIVE_PRESENT_SIMPLE: Card = {
             ru: "Ты - инженер(в ед.ч.)  ИЛИ Вы - инженеры(во мн.ч.)",
             exampleFilter: {
                 pronoun: "you",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "statement"
             }
         },
@@ -403,7 +403,7 @@ export const ACTIVE_PRESENT_SIMPLE: Card = {
             ru: "Он - инженер.",
             exampleFilter: {
                 pronoun: "heSheIt",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "statement"
             }
         },
@@ -412,7 +412,7 @@ export const ACTIVE_PRESENT_SIMPLE: Card = {
             ru: "Они - инженеры.",
             exampleFilter: {
                 pronoun: "they",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "statement"
             }
         },
@@ -421,7 +421,7 @@ export const ACTIVE_PRESENT_SIMPLE: Card = {
             ru: "Я не инженер.",
             exampleFilter: {
                 pronoun: "I",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "negation"
             }
         },
@@ -430,7 +430,7 @@ export const ACTIVE_PRESENT_SIMPLE: Card = {
             ru: "Мы не инженеры.",
             exampleFilter: {
                 pronoun: "we",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "negation"
             }
         },
@@ -439,7 +439,7 @@ export const ACTIVE_PRESENT_SIMPLE: Card = {
             ru: "Ты не инженер(в ед.ч.)  ИЛИ Вы не инженеры(во мн.ч.)",
             exampleFilter: {
                 pronoun: "you",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "negation"
             }
         },
@@ -448,7 +448,7 @@ export const ACTIVE_PRESENT_SIMPLE: Card = {
             ru: "Он не инженер.",
             exampleFilter: {
                 pronoun: "heSheIt",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "negation"
             }
         },
@@ -457,7 +457,7 @@ export const ACTIVE_PRESENT_SIMPLE: Card = {
             ru: "Они не инженеры.",
             exampleFilter: {
                 pronoun: "they",
-                verb: "toBo",
+                verb: "toBe",
                 sentenceType: "negation"
             }
         }

@@ -5,8 +5,9 @@ import { ACTIVE_FUTURE_SIMPLE } from './cards/ACTIVE_FUTURE_SIMPLE';
 import { ACTIVE_PAST_CONTINUOUS } from './cards/ACTIVE_PAST_CONTINUOUS';
 import { ACTIVE_FUTURE_CONTINUOUS } from './cards/ACTIVE_FUTURE_CONTINUOUS';
 import { ACTIVE_PAST_PERFECT } from './cards/ACTIVE_PAST_PERFECT'
+import { ACTIVE_PRESENT_PERFECT } from './cards/ACTIVE_PRESENT_PERFECT'
+
 import { CONDITIONAL_CARDS } from './cards/CONDITION';
-// import { PAST_PERFECT } from './cards/PAST_PERFECT'
 
 export const CARDS = [
     {
@@ -21,8 +22,7 @@ export const CARDS = [
             ACTIVE_FUTURE_CONTINUOUS,
 
             ACTIVE_PAST_PERFECT, 
-            
-        //...PAST_PERFECT
+            ACTIVE_PRESENT_PERFECT
         ]
     },
     {
