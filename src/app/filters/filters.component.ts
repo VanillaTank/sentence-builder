@@ -21,6 +21,7 @@ export class FiltersComponent implements OnInit {
 
     ngOnInit(): void {
         this.createRandomExampleFilter();
+        this.cardFilterService.onMainFilterChange('general')
     }
 
     createRandomExampleFilter() {

@@ -5,5 +5,5 @@ cp ./docs/index.html ./docs/404.html #Скопируй и переименуй �
 
 git add .
 git commit -m 'update site'
-git push origin HEAD
+git push origin HEAD:dev
 echo 'site is updated'

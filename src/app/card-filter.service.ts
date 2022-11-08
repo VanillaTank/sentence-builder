@@ -38,35 +38,17 @@ export class CardFilterService {
     initCards() {
         this.mainFilterCards = JSON.parse(JSON.stringify(this.CARDS.find(o => o.mainFilter === this.mainFilterCurrentValue)))
         this.mainFilterCards.cards.map((c: Card) => c.examples.forEach((e: Example) => e.show = false))
-        // this.randomFilterExamples();
         this.filtedCard.next(this.mainFilterCards?.cards);
     }
 
     onMainFilterChange(value: string): void {
         this.mainFilterCards = this.CARDS.find(o => o.mainFilter === value);
         this.mainFilterCurrentValue = value;
-        // this.randomFilterExamples();
         this.filtedCard.next(this.mainFilterCards?.cards);
 
         const newFilter: Filter | Filter[] = this.FILTERS[value as keyof MyFilters];
         this.currentFilters.next([...this.FILTERS.main, ...newFilter]);
     }
-
-    // randomFilterExamples(): void {
-    //     this.mainFilterCards?.cards.forEach((c: Card) => {
-    //         c.examples.forEach((e: Example) => e.show = false);
-    //         const arrRandIndexes: number[] = [];
-    //         const exampleLength = c.examples.length
-    //         for (let i = 0; i < 5 && i <= exampleLength; i++) {
-    //             let randomIndex: number | never = Math.floor(Math.random() * exampleLength);
-    //             while (arrRandIndexes.includes(randomIndex) && arrRandIndexes.length < exampleLength) {
-    //                 randomIndex = Math.floor(Math.random() * exampleLength);
-    //             }
-    //             arrRandIndexes.push(randomIndex)
-    //             c.examples[randomIndex].show = true;
-    //         }
-    //     })
-    // }
 
     onCardFilterChange(query: any): void {
         const filtredCardsByCardFilter = this.mainFilterCards?.cards.filter((card: Card) => {
