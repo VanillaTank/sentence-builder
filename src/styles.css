@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -52,11 +54,13 @@ button {
 .justifyBetween {
     justify-content: space-between;
 }
+
 .nav_side {
     max-width: 335px;
     width: 100%;
     margin-right: 50px;
 }
+
 .htu_btn {
     background-color: #fff;
     border-radius: 5px;
@@ -82,4 +86,44 @@ button {
 
 .htu_btn:active:focus {
     background-color: #C8D2B5;
+}
+
+.restrictHeight {
+    max-height: calc(100vh - 20px);
+    overflow-y: auto;
+}
+
+.scrollStyle {
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.scrollStyle::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.scrollColorPink::-webkit-scrollbar-thumb {
+    background-color: #f1a2ac;
+}
+
+.scrollColorGreen::-webkit-scrollbar-thumb {
+    background-color: #899d66;
+}
+
+.scrollStyle::-webkit-scrollbar-track {
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.25) inset;
+    background-color: #f9f9fd;
+    border-radius: 10px;
+}
+
+.scrollStyle::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, .25) 50%,
+            rgba(255, 255, 255, .25) 75%,
+            transparent 75%,
+            transparent);
 }

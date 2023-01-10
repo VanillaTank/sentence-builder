@@ -5,9 +5,9 @@
     background-color: #fff;
     padding: 15px 17px;
     border-radius: 8px;
-    box-shadow: -2px -2px 10px #7C6C6D;
-    box-shadow: 2px 4px 10px #7C6C6D;
+    box-shadow: -2px -2px 10px #7C6C6D, 2px 4px 10px #7C6C6D;
     z-index: 1;
+    cursor: default;
 }
 
 .title {

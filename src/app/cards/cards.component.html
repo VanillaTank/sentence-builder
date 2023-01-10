@@ -1,6 +1,6 @@
-<ul>
-    <li *ngFor="let card of Cards">
-        <div class="card">
+<div class="container">
+    <ng-container *ngFor="let card of Cards">
+        <div *ngIf="card.shown" class="card">
             <h3 class="title">{{card.title}}</h3>
             <h4 class="sub-title">THEORY</h4>
             <p class="theory">{{card.theory}}</p>
@@ -8,7 +8,6 @@
             <h4 class="sub-title">SCHEMAS</h4>
             <p *ngFor="let s of card.schemas" class="schema">{{s}}</p>
             <h4 class="sub-title">EXAMPLES</h4>
-            <p class="tip">Чтобы увидеть больше примеров, измените настройки EXAMPLE FILTER</p>
             <div *ngFor="let e of card.examples" class="example">
                 <div *ngIf="e.show">
                     <p class="en">{{e.en}}</p>
@@ -17,5 +16,5 @@
                 </div>
             </div>
         </div>
-    </li>
-</ul>
+    </ng-container>
+</div>

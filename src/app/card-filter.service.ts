@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from "rxjs";
+import { BehaviorSubject, Subject } from "rxjs";
 
 // Cards
 import { Card, Example } from './cardInterfaces';
@@ -32,17 +32,20 @@ export class CardFilterService {
     mainFilterCurrentValue: string = 'general';
     mainFilterCards: any = JSON.parse(JSON.stringify(this.CARDS.find(o => o.mainFilter === this.mainFilterCurrentValue)));
 
-    filtedCard = new BehaviorSubject<Card[]>(this.mainFilterCards.cards);
+    filtedCard = new Subject<Card[]>();
     currentFilters = new BehaviorSubject<Filter[]>([...this.FILTERS.main, ...this.FILTERS.general]);
 
     initCards() {
-        this.mainFilterCards = JSON.parse(JSON.stringify(this.CARDS.find(o => o.mainFilter === this.mainFilterCurrentValue)))
-        this.mainFilterCards.cards.map((c: Card) => c.examples.forEach((e: Example) => e.show = false))
-        this.filtedCard.next(this.mainFilterCards?.cards);
+        this.CARDS.forEach(category => {
+            category.cards.forEach((c: Card) => {
+                c.shown = true;
+                c.examples.forEach((e: Example) => e.show = false);
+            })
+        })
     }
 
     onMainFilterChange(value: string): void {
-        this.mainFilterCards = this.CARDS.find(o => o.mainFilter === value);
+        this.mainFilterCards = this.CARDS.find(category => category.mainFilter === value);
         this.mainFilterCurrentValue = value;
         this.filtedCard.next(this.mainFilterCards?.cards);
 
@@ -51,25 +54,35 @@ export class CardFilterService {
     }
 
     onCardFilterChange(query: any): void {
-        const filtredCardsByCardFilter = this.mainFilterCards?.cards.filter((card: Card) => {
+        if (Object.keys(query).length === 0) {
+            this.mainFilterCards.cards.forEach((c: Card) => c.shown = true);
+            this.filtedCard.next(this.mainFilterCards?.cards);
+            return;
+        }
+
+
+        this.mainFilterCards?.cards.forEach((card: Card) => {
             for (let q in query) {
                 if (query[q].length > 0 && !query[q].includes(card.cardFilter[q])) {
-                    return false
+                    card.shown = false;
+                    return;
                 }
             }
-            return true;
+            card.shown = true;
+            return card;
         })
 
-
-        this.filtedCard.next(filtredCardsByCardFilter)
+        this.filtedCard.next(this.mainFilterCards?.cards);
     }
 
 
     onExampleFilterChange(query: any): void {
 
         if (Object.keys(query).length === 0) {
-            this.mainFilterCards.cards.forEach((c: Card) => c.examples.forEach((e: Example) => e.show = true))
-            this.filtedCard.next(this.mainFilterCards?.cards)
+            this.mainFilterCards.cards.forEach((c: Card) => {
+                c.examples.forEach((e: Example) => e.show = true)
+            });
+            this.filtedCard.next(this.mainFilterCards?.cards);
             return;
         }
 
@@ -79,7 +92,7 @@ export class CardFilterService {
                 for (let q in query) {
                     if (query[q].length > 0 && !query[q].includes(e.exampleFilter[q])) {
                         e.show = false;
-                        return
+                        return;
                     }
                 }
                 e.show = true;

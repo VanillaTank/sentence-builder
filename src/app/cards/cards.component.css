@@ -1,12 +1,18 @@
+.container {
+    cursor: default;
+}
+
 .card {
     background-color: #fff;
     padding: 17px 27px;
     border-radius: 8px;
-    box-shadow: -2px -2px 10px #7C6C6D;
-    box-shadow: 2px 4px 10px #7C6C6D;
+    box-shadow: -2px -2px 10px #7C6C6D, 2px 4px 10px #7C6C6D;
+    max-width: 580px;
+    min-width: 580px;
+    width: 100%;
 }
 
-li+li {
+.card+.card {
     margin-top: 35px;
 }
 
@@ -29,13 +35,6 @@ li+li {
 
 .schema+.schema {
     margin-top: 10px;
-}
-
-.tip {
-    color: #998F8F;
-    font-size: 14px;
-    margin-top: -5px;
-    margin-bottom: 10px;
 }
 
 .example+.example {

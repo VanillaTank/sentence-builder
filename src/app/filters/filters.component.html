@@ -1,29 +1,24 @@
 <div class="nav">
-    <div *ngFor="let filter of Filters" class="filter_wrap" 
-        [ngClass]="{orange: filter.id === 'cardFilter', violet: filter.id === 'exampleFilter'}"
-        >
+    <div *ngFor="let filter of Filters" class="filter_wrap"
+        [ngClass]="{orange: filter.id === 'cardFilter', violet: filter.id === 'exampleFilter'}">
         <h4 class="title">{{filter.title}}</h4>
 
         <ul *ngIf="filter.type === 'btn-filter'" class="btn_filter flex">
             <li *ngFor="let c of filter.content">
-                <button [class.active]="c.checked" class="btn" (click)="onClickBtnFilter(c, filter.id)">{{c.title}}</button>
+                <button [class.active]="c.checked" class="btn"
+                    (click)="onClickBtnFilter(c, filter.id)">{{c.title}}</button>
             </li>
         </ul>
 
         <ul *ngIf="filter.type === 'list-filter'" class="list_filter">
             <li *ngFor="let c of filter.content" class="filter">
-                <div 
-                    class="title_row"
-                    (click)="onTitleRowClick(c)"
-                >
+                <div class="title_row" (click)="onTitleRowClick(c)">
                     <h4>{{c.title}}</h4>
                 </div>
                 <ul class="content" [class.show]="c.shown">
-                    <li 
-                    *ngFor="let v of c.values" 
-                    (click)="onClickBtnFilter(c, filter.id, v)"
-                    class="value"
-                    ><span [class.checked]="v.checked">{{v.title}}</span></li>
+                    <li *ngFor="let v of c.values" (click)="onClickBtnFilter(c, filter.id, v)" class="value">
+                        <span [class.checked]="v.checked">{{v.title}}</span>
+                    </li>
                 </ul>
             </li>
         </ul>

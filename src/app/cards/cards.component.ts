@@ -1,27 +1,22 @@
-import { Component, ChangeDetectorRef, OnDestroy } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { CardFilterService } from '../card-filter.service'
-import {Card} from '../cardInterfaces';
+import { Card } from '../cardInterfaces';
 
 @Component({
     selector: 'app-cards',
     templateUrl: './cards.component.html',
     styleUrls: ['./cards.component.css']
 })
-export class CardsComponent implements OnDestroy {
+export class CardsComponent {
 
-    Cards: any = [];
+    Cards: Card[] = [];
 
     constructor(
-        private cardFilterService: CardFilterService, 
-        public readonly cdr: ChangeDetectorRef) { 
-           this.cardFilterService.filtedCard.subscribe((cards: any) => {this.Cards = cards});
-        }
-
-
-    ngOnDestroy(): void {
-        // this.destroy$.next();
-        // this.destroy$.complete();
+        private cardFilterService: CardFilterService,
+        public readonly cdr: ChangeDetectorRef) {
+        this.cardFilterService.filtedCard.subscribe((cards: Card[]) => {
+            this.Cards = cards;
+        });
     }
-
 
 }
